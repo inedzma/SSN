@@ -5,6 +5,7 @@ import Layout from "./components/Layout";
 import {Pocetna} from "./pages/Pocetna";
 import {Kategorije} from "./pages/Kategorije";
 import {Prijava} from "./pages/Prijava";
+import {Registracija} from "./pages/Registracija";
 
 
 
@@ -16,6 +17,7 @@ function App() {
                       <Route index element={<Pocetna />} />
                       <Route path="product-list" element={<Kategorije />} />
                       <Route path="prijava" element={<Prijava />} />
+                      <Route path="registracija" element={<Registracija />} />
                       {/*<Route path="*" element={<NoPage />} />*/}
               </Routes>
           </BrowserRouter>
