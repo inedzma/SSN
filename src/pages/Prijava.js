@@ -53,8 +53,8 @@ export const Prijava = () => {
                             </div>
 
                         </div>
-                        <div className="text-sm left-4">
-                            <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                        <div className="text-sm flex justify-end items-center ">
+                            <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500 pr-3" >
                                 Zaboravili ste šifru?
                             </a>
                         </div>
@@ -65,6 +65,11 @@ export const Prijava = () => {
                             >
                                 Prijavi se
                             </button>
+                        </div>
+                         <div className="flex justify-center items-center text-sm ">
+                            <a href="/Registracija" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                                Registrujte se
+                            </a>
                         </div>
                     </form>
                 </div>
