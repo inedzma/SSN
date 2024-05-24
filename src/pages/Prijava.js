@@ -54,7 +54,7 @@ export const Prijava = () => {
 
                         </div>
                         <div className="text-sm flex justify-end items-center ">
-                            <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500 pr-3" >
+                            <a href="/zaboravljena-sifra" className="font-semibold text-indigo-600 hover:text-indigo-500 pr-3" >
                                 Zaboravili ste šifru?
                             </a>
                         </div>
