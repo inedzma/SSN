@@ -119,7 +119,7 @@ export const Header = () => {
             className="grid max-w-screen-lg px-4 py-5 mx-auto text-gray-900 dark:text-white sm: grid-cols-3 md:px-6">
             <ul>
                 <li>
-                    <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <a href="/Ogrlice" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                         <div className="font-semibold text-white hover:text-customColor4">Ogrlice</div>
                     </a>
                 </li>

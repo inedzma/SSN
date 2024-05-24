@@ -6,6 +6,7 @@ import {Pocetna} from "./pages/Pocetna";
 import {Kategorije} from "./pages/Kategorije";
 import {Prijava} from "./pages/Prijava";
 import {Registracija} from "./pages/Registracija";
+import {Ogrlice} from "./pages/Ogrlice";
 
 
 
@@ -18,6 +19,7 @@ function App() {
                       <Route path="product-list" element={<Kategorije />} />
                       <Route path="prijava" element={<Prijava />} />
                       <Route path="registracija" element={<Registracija />} />
+                       <Route path="ogrlice" element={<Ogrlice />} />
                       {/*<Route path="*" element={<NoPage />} />*/}
               </Routes>
           </BrowserRouter>
