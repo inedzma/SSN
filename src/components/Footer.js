@@ -7,7 +7,7 @@ export const Footer = () => {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="https://flowbite.com/" className="flex items-center">
-                            <img src="ssn-logo.png" className="h-36 me-3"
+                            <img src="/ssn-logo.png" className="h-36 me-3"
                                  alt="FlowBite Logo"/>
                             <span
                                 className="self-center text-4xl font-semibold whitespace-nowrap text-white">SSN shop</span>

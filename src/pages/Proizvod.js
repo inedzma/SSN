@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import {useParams} from "react-router-dom"
+import {useParams} from "react-router-dom";
 import {sviProizvodi} from "../sviProizvodi";
 
 
@@ -13,7 +13,7 @@ export const Proizvod = () => {
 
     return  (
         <Layout>
-            <h1>{proizvod.name}</h1>
+
         </Layout>
     )
 }

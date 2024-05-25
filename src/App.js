@@ -10,9 +10,9 @@ import {Proizvod} from "./pages/Proizvod";
 import {Kategorija} from "./pages/Kategorija";
 
 
-
 function App() {
   return (
+
           <BrowserRouter>
               <Routes>
 
