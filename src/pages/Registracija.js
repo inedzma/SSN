@@ -1,7 +1,55 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import Layout from "../components/Layout";
 
 export const Registracija = () => {
+    const emailRef = useRef(null);
+    const sifraRef = useRef(null);
+    const usloviRef = useRef(null);
+    const potvrdiSifruRef = useRef(null);
+    useEffect(() => {
+        if (emailRef.current) {
+            emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
+            emailRef.current.addEventListener('input', () => {
+                if (emailRef.current.value === '') {
+                    emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
+                } else if (!emailRef.current.value.includes('@')) {
+                    emailRef.current.setCustomValidity('Email mora sadržavati @');
+                } else {
+                    emailRef.current.setCustomValidity('');
+                }
+            });
+        }
+        if (sifraRef.current) {
+            sifraRef.current.setCustomValidity('Molim Vas unesite šifru');
+            sifraRef.current.addEventListener('input', () => {
+                if (sifraRef.current.value === '') {
+                    sifraRef.current.setCustomValidity('Molim Vas unesite šifru');
+                } else {
+                    sifraRef.current.setCustomValidity('');
+                }
+            });
+        }
+            if (potvrdiSifruRef.current) {
+                potvrdiSifruRef.current.setCustomValidity('Molim Vas potvrdite šifru');
+                potvrdiSifruRef.current.addEventListener('input', () => {
+                    if (potvrdiSifruRef.current.value !== sifraRef.current.value) {
+                        potvrdiSifruRef.current.setCustomValidity('Šifre se ne podudaraju');
+                    } else {
+                        potvrdiSifruRef.current.setCustomValidity('');
+                    }
+                });
+            }
+            if (usloviRef.current) {
+                usloviRef.current.setCustomValidity('Molim Vas prihvatite uslove');
+                usloviRef.current.addEventListener('input', () => {
+                    if (!usloviRef.current.checked) {
+                        usloviRef.current.setCustomValidity('Molim Vas prihvatite uslove');
+                    } else {
+                        usloviRef.current.setCustomValidity('');
+                    }
+                });
+            }
+        }, []);
     return (
         <Layout className="pt-30">
 
@@ -18,7 +66,7 @@ export const Registracija = () => {
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form className="space-y-6" action="#" method="POST">
+                    <form className="space-y-6" action="/">
                     <div>
                             <label htmlFor="ime" className="block text-sm font-medium leading-6 text-gray-900">
                                 Ime
@@ -55,6 +103,7 @@ export const Registracija = () => {
                             </label>
                             <div className="mt-2">
                                 <input
+                                    ref={emailRef}
                                     id="email"
                                     name="email"
                                     type="email"
@@ -76,6 +125,7 @@ export const Registracija = () => {
 
                             <div className="mt-2">
                                 <input
+                                    ref={sifraRef}
                                     id="password"
                                     name="password"
                                     type="password"
@@ -97,6 +147,7 @@ export const Registracija = () => {
 
                             <div className="mt-2">
                                 <input
+                                    ref={potvrdiSifruRef}
                                     id="repeat-password"
                                     name="repeat-password"
                                     type="password"
@@ -120,7 +171,7 @@ export const Registracija = () => {
 
                         <div className="flex items-start mb-5">
                           <div className="flex items-center h-5">
-                            <input id="terms" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+                            <input ref={usloviRef} id="terms" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
                           </div>
                           <label for="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Slažem se sa <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">uslovima</a></label>
                         </div>

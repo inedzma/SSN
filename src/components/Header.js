@@ -131,7 +131,7 @@ export const Header = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="/Prstenje" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <div className="font-semibold text-white hover:text-customColor4">Prstenje</div>
                             </a>
                         </li>
@@ -144,19 +144,19 @@ export const Header = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="/Privjesci" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <div className="font-semibold text-white hover:text-customColor4">Privjesci</div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="/Pokloni" className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <div className="font-semibold text-white hover:text-customColor4">Pokloni</div>
                             </a>
                         </li>
                     </ul>
                     <ul className="hidden lg:block">
                         <li>
-                            <img src="nakit.webp" className="h-140"></img>
+                            <img src="/nakit.webp" className="h-140"></img>
                         </li>
                     </ul>
                 </div>

@@ -1,7 +1,44 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import Layout from "../components/Layout";
 
 export const ZaboravljenaSifra = () => {
+    const emailRef = useRef(null);
+    const sifraRef = useRef(null);
+    const potvrdiSifruRef = useRef(null);
+    useEffect(() => {
+        if (emailRef.current) {
+            emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
+            emailRef.current.addEventListener('input', () => {
+                if (emailRef.current.value === '') {
+                    emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
+                } else if (!emailRef.current.value.includes('@')) {
+                    emailRef.current.setCustomValidity('Email mora sadržavati @');
+                } else {
+                    emailRef.current.setCustomValidity('');
+                }
+            });
+        }
+        if (sifraRef.current) {
+            sifraRef.current.setCustomValidity('Molim Vas unesite šifru');
+            sifraRef.current.addEventListener('input', () => {
+                if (sifraRef.current.value === '') {
+                    sifraRef.current.setCustomValidity('Molim Vas unesite šifru');
+                } else {
+                    sifraRef.current.setCustomValidity('');
+                }
+            });
+        }
+        if (potvrdiSifruRef.current) {
+            potvrdiSifruRef.current.setCustomValidity('Molim Vas potvrdite šifru');
+            potvrdiSifruRef.current.addEventListener('input', () => {
+                if (potvrdiSifruRef.current.value !== sifraRef.current.value) {
+                    potvrdiSifruRef.current.setCustomValidity('Šifre se ne podudaraju');
+                } else {
+                    potvrdiSifruRef.current.setCustomValidity('');
+                }
+            });
+        }
+    }, []);
     return (
       <Layout className="pt-30">
 
@@ -9,7 +46,7 @@ export const ZaboravljenaSifra = () => {
                       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                           <img
                               className="mx-auto h-36 w-auto"
-                              src="ssn-logo.png"
+                              src="/ssn-logo.png"
                               alt="Your Company"
                           />
                           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -18,7 +55,7 @@ export const ZaboravljenaSifra = () => {
                       </div>
       
                       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                          <form className="space-y-6" action="#" method="POST">
+                          <form className="space-y-6" action="/">
                           
                             
                               <div>
@@ -27,6 +64,7 @@ export const ZaboravljenaSifra = () => {
                                   </label>
                                   <div className="mt-2">
                                       <input
+                                          ref={emailRef}
                                           id="email"
                                           name="email"
                                           type="email"
@@ -48,6 +86,7 @@ export const ZaboravljenaSifra = () => {
       
                                   <div className="mt-2">
                                       <input
+                                          ref={sifraRef}
                                           id="password"
                                           name="password"
                                           type="password"
@@ -69,6 +108,7 @@ export const ZaboravljenaSifra = () => {
       
                                   <div className="mt-2">
                                       <input
+                                          ref={potvrdiSifruRef}
                                           id="repeat-password"
                                           name="repeat-password"
                                           type="password"

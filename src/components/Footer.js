@@ -6,45 +6,33 @@ export const Footer = () => {
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <a href="https://flowbite.com/" className="flex items-center">
+                        <p className="flex items-center">
                             <img src="/ssn-logo.png" className="h-36 me-3"
-                                 alt="FlowBite Logo"/>
+                                 alt="SSN Logo"/>
                             <span
                                 className="self-center text-4xl font-semibold whitespace-nowrap text-white">SSN shop</span>
-                        </a>
+                        </p>
                     </div>
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                        <div>
-                            <h2 className="mb-6 text-lg font-semibold text-white uppercase dark:text-white">Resources</h2>
-                            <ul className="text-white dark:text-white font-medium">
-                                <li className="mb-4">
-                                    <a className="hover:underline">Flowbite</a>
-                                </li>
-                                <li>
-                                    <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div className="grid grid-cols-2 gap-20 sm:gap-8 sm:grid-cols-2 sm:pr-16 sm:pt-4">
                         <div>
                             <h2 className="mb-6 text-lg font-semibold text-white uppercase dark:text-white">Zaprati nas</h2>
                             <ul className="text-white dark:text-white font-medium">
                                 <li className="mb-4">
-                                    <a href="https://github.com/themesberg/flowbite"
-                                       className="hover:underline ">Facebook</a>
+                                    <p className="hover:underline ">Facebook</p>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Instagram</a>
+                                    <p className="hover:underline">Instagram</p>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-lg font-semibold text-white uppercase dark:text-white">Legal</h2>
+                            <h2 className="mb-6 text-lg font-semibold text-white uppercase dark:text-white">Privatnost</h2>
                             <ul className="text-white dark:text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <a href="#" className="hover:underline">Politika privatnosti</a>
+                                    <p className="hover:underline">Politika privatnosti</p>
                                 </li>
                                 <li>
-                                    <a href="#" className="hover:underline">Odredbe &amp; Uslovi</a>
+                                    <p className="hover:underline">Odredbe i uslovi</p>
                                 </li>
                             </ul>
                         </div>
