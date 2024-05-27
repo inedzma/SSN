@@ -799,3 +799,21 @@ video {
 .size-6:hover{
   color:white;
 }
+.pls{
+  background-image: url('https://www.limelight.pk/cdn/shop/collections/1200x330-Jewelry.webp?v=1674559019');
+  background-size: cover;
+  height: 400px;
+}
+
+.dugme{
+  background-color: rgb(104,91,81);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
