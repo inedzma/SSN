@@ -7,7 +7,6 @@ export const Prijava = () => {
     const sifraRef = useRef(null);
     useEffect(() => {
         if (emailRef.current) {
-            console.log("emailRef:", emailRef.current);
             emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
             emailRef.current.addEventListener('input', () => {
                 if (emailRef.current.value === '') {
@@ -20,7 +19,6 @@ export const Prijava = () => {
             });
         }
         if (sifraRef.current) {
-            console.log("emailRef:", sifraRef.current);
             sifraRef.current.setCustomValidity('Molim Vas unesite šifru');
             sifraRef.current.addEventListener('input', () => {
                 if (sifraRef.current.value === '') {
