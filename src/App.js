@@ -9,6 +9,7 @@ import {ONama} from "./pages/O nama";
 import {Proizvod} from "./pages/Proizvod";
 import {Kategorija} from "./pages/Kategorija";
 import { Kontakt } from './pages/Kontakt';
+import {Korpa} from "./pages/Korpa";
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
 					  <Route path="kontakt" element={<Kontakt />} />
 
                   {/*<Route path="*" element={<NoPage />} />*/}
+                      <Route path="kontakt" element={<Kontakt />} />
+                      {/*<Route path="*" element={<NoPage />} />*/}
+                      <Route path="korpa" element={<Korpa />} />
               </Routes>
           </BrowserRouter>
 
