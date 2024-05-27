@@ -10,6 +10,7 @@ import {Proizvod} from "./pages/Proizvod";
 import {Kategorija} from "./pages/Kategorija";
 import { Kontakt } from './pages/Kontakt';
 import {Korpa} from "./pages/Korpa";
+import { Omiljeni } from './pages/Omiljeni';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                       <Route path="kontakt" element={<Kontakt />} />
                       {/*<Route path="*" element={<NoPage />} />*/}
                       <Route path="korpa" element={<Korpa />} />
+                      <Route path="omiljeni" element={<Omiljeni />} />
               </Routes>
           </BrowserRouter>
 

@@ -1,0 +1,18 @@
+[
+  {
+      "id": 1,
+      "name": "Zlatni lančić",
+      "description": "Ovaj zlatni lančić je savršen dodatak svakom outfitu. Dizajniran je za žene koje cijene stil, sofisticiranost i individualnost. Vjerujemo da nakit ima moć da promijeni način na koji se osjećate, dodajući dašak luksuza i elegancije vašem izgledu",
+      "price": 21.95,
+      "imageSrc": "/ogrlica1.jpeg",
+      "kategorija": "Ogrlice"
+  },
+  {
+      "id": 2,
+      "name": "Product 2",
+      "description": "Description of Product 2",
+      "price": 200,
+      "imageSrc": "/path/to/image2.jpg",
+      "kategorija": "category2"
+  }
+]
