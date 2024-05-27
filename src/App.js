@@ -8,6 +8,8 @@ import {ZaboravljenaSifra} from './pages/ZaboravljenaSifra';
 import {ONama} from "./pages/O nama";
 import {Proizvod} from "./pages/Proizvod";
 import {Kategorija} from "./pages/Kategorija";
+import { Kontakt } from './pages/Kontakt';
+
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
                       <Route path="/:kategorija/:id" element={<Proizvod />} />
 
                   {/*<Route path="*" element={<NoPage />} />*/}
+                      <Route path="kontakt" element={<Kontakt />} />
+                      {/*<Route path="*" element={<NoPage />} />*/}
               </Routes>
           </BrowserRouter>
 
