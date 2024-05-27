@@ -11,14 +11,14 @@ export const Proizvod = () => {
     const kategorijaIzRute = params.kategorija
     const idIzRute = params.id
 
-    const proizvod = sviProizvodi.find(product => product.kategorija === kategorijaIzRute && product.id === parseInt(idIzRute));
+    const proizvod = sviProizvodi.find(proizvod => proizvod.kategorija === kategorijaIzRute && proizvod.id === parseInt(idIzRute));
 
     const [kolicina, setQuantity] = useState(1);
     const handleAddToFavorites = () => {
-        console.log(` ${proizvod.name} dodan u omiljene.`);
+        console.log(` ${proizvod.ime} dodan u omiljene.`);
     };
     const handleAddToCart = () => {
-        console.log(` ${proizvod.name} dodan u korpu. Kolicina ${kolicina}`);
+        console.log(` ${proizvod.ime} dodan u korpu. Kolicina ${kolicina}`);
     };
 
     return  (
@@ -26,15 +26,15 @@ export const Proizvod = () => {
             <div className="flex max-w-6xl mx-auto mt-24 mb-24 my-4 pl-20">
                 <div className="flex-none p-4">
                     <div className="mb-4 max-w-md">
-                        <img src={proizvod.imageSrc} alt={proizvod.name} className="rounded max-w-full h-auto"/>
+                        <img src={proizvod.slikaSrc} alt={proizvod.slikaAlt} className="rounded max-w-full h-auto"/>
                     </div>
                 </div>
                 <div className="flex-2 pl-16 mt-16">
-                    <h1 className="text-3xl mb-2">{proizvod.name}</h1>
-                    <p className="mb-4">{proizvod.description}</p>
+                    <h1 className="text-3xl mb-2">{proizvod.ime}</h1>
+                    <p className="mb-4">{proizvod.opis}</p>
                     <div className="flex items-center mt-2">
                         <span className="text-gray-500 mr-2">Cijena:</span>
-                        <span className="text-red-600">{(parseFloat(proizvod.price)*kolicina).toFixed(2)} KM</span>
+                        <span className="text-red-600">{(parseFloat(proizvod.cijena)*kolicina).toFixed(2)} KM</span>
                     </div>
                     <div className="flex items-center mt-4">
                         <label htmlFor="kolicina" className="mr-2 text-gray-500">Količina:</label>
