@@ -25,16 +25,6 @@ export const Kontakt = () => {
               <textarea id="message" rows="6" className="p-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-gray-700 dark:ring-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-600" placeholder="Napišite poruku..."></textarea>
           </div>
           <button className="py-3 px-5 text-lg font-medium text-center rounded-lg dugme">Pošalji</button>
-          <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4008.4319846024578!2d104.90963508577306!3d11.588733789197796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095362d82280bf%3A0xa3fbb989cb2c069c!2sSSN%20JewelryStore!5e0!3m2!1shr!2sba!4v1716801458515!5m2!1shr!2sba"
-        width="600"
-        height="450"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        title="karta"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
       </form>
   </div>
 </section>
