@@ -8,7 +8,7 @@ export const Header = () => {
     }
     return (
         <>
-            <nav className="bg-customColor border-gray-200 ">
+            <nav className="bg-customColor border-gray-200 relative">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="/ssn-logo.png" className="h-11" alt="Logo"/>
@@ -116,7 +116,7 @@ export const Header = () => {
                 </div>
             </nav>
             <div id="mega-menu-full-dropdown"
-                 className="sakrij grid-cols-3 gap-5 border-white shadow-sm bg-gray-50 md:bg-customColor border-y dark:bg-gray-800 dark:border-gray-600">
+                 className="sakrij absolute inset-x-0 z-50 grid-cols-3 gap-5 border-white shadow-sm bg-gray-50 md:bg-customColor border-y dark:bg-gray-800 dark:border-gray-600" style={{top: '75px'}}>
                 <div
                     className="grid max-w-screen-lg px-4 py-5 mx-auto text-gray-900 dark:text-white grid-cols-2 lg:grid-cols-3 md:px-6 bg-customColor">
                     <ul>
