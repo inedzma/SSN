@@ -44,10 +44,10 @@ export const Omiljeni = () => {
             {omiljeniProizvodi.map((product) => (
               <tr key={product.id} className="border-b h-36 w-min-36 borderB">
                 <td className="py-2 flex flex-row items-center text-lg font-bold" style={{fontWeight: 'bold'}}>
-                  <img src={product.imageSrc} className="h-36 mr-5 rounded-lg pl-5"/>
-                  {product.name}
+                  <img src={product.slikaSrc} className="h-36 mr-5 rounded-lg pl-5"/>
+                  {product.ime}
                 </td>
-                <td className="py-2">{product.price ? product.price.toFixed(2) + ' KM' : 'N/A'}</td>
+                <td className="py-2">{product.cijena ? product.cijena.toFixed(2) + ' KM' : 'N/A'}</td>
                 <td>
                   <button onClick={() => removeFromFavorites(product.id)} className="font-medium text-red-600 hover:text-red-500">
                     Ukloni

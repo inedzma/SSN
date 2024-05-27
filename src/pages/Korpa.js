@@ -6,7 +6,7 @@ export const Korpa = () => {
 
   // Ukupna cijena korpe
   const ukupnaCijena = korpaProizvodi.reduce((total, product) => {
-    return total + (parseFloat(product.price) * product.quantity);
+    return total + (parseFloat(product.cijena) * product.quantity);
   }, 0);
 
   const removeFromCart = (id) => {
@@ -48,12 +48,12 @@ export const Korpa = () => {
               {korpaProizvodi.map((product) => (
                 <tr key={product.id} className="border-b h-36 w-min-36 borderB">
                   <td className="py-2 flex flex-row items-center text-lg " style={{fontWeight: 'bold'}}>
-                    <img src={product.imageSrc} className="h-36 mr-5 rounded-lg pl-5"/>
-                    {product.name}</td>
-                  <td className="py-2">{product.price.toFixed(2)} KM</td>
+                    <img src={product.slikaSrc} className="h-36 mr-5 rounded-lg pl-5"/>
+                    {product.ime}</td>
+                  <td className="py-2">{product.cijena ? product.cijena.toFixed(2) + ' KM' : 'N/A'}</td>
                   <td className="py-2 pl-6">{product.quantity}</td>
                   <td className="py-2">
-                    {(parseFloat(product.price) * product.quantity).toFixed(2)} KM
+                    {(parseFloat(product.cijena) * product.quantity).toFixed(2)} KM
                   </td>
                   <td>
                     <button onClick={() => removeFromCart(product.id)}
