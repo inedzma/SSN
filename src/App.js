@@ -11,7 +11,6 @@ import {Kategorija} from "./pages/Kategorija";
 import { Kontakt } from './pages/Kontakt';
 
 
-
 function App() {
   return (
 
@@ -25,6 +24,7 @@ function App() {
                       <Route path="/:kategorijaIzRute" element={<Kategorija />} />
                       <Route path="onama" element={<ONama />} />
                       <Route path="/:kategorija/:id" element={<Proizvod />} />
+					  <Route path="kontakt" element={<Kontakt />} />
 
                   {/*<Route path="*" element={<NoPage />} />*/}
                       <Route path="kontakt" element={<Kontakt />} />
