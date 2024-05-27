@@ -15,10 +15,48 @@ export const Proizvod = () => {
 
     const [kolicina, setQuantity] = useState(1);
     const handleAddToFavorites = () => {
-        console.log(` ${proizvod.ime} dodan u omiljene.`);
-    };
+        const newItem = {
+            id: proizvod.id,
+            name: proizvod.name,
+            price: proizvod.price,
+            imageSrc: proizvod.imageSrc
+        };
+          const currentFavorites = JSON.parse(localStorage.getItem('omiljeniProizvodi')) || [];
+          const productIndex = currentFavorites.findIndex((item) => item.id === proizvod.id);
+
+          if(productIndex === -1) {
+                currentFavorites.push(newItem);
+                
+          }
+          else {
+            window.alert('Proizvod je već dodan u omiljene');
+          }
+
+            localStorage.setItem('omiljeniProizvodi', JSON.stringify(currentFavorites));
+            console.log(`${proizvod.name} dodan u omiljene`);
+
+
+        };
     const handleAddToCart = () => {
-        console.log(` ${proizvod.ime} dodan u korpu. Kolicina ${kolicina}`);
+        const newItem = {
+            id: proizvod.id,
+            name: proizvod.name,
+            price: proizvod.price,
+            quantity: kolicina,
+            imageSrc: proizvod.imageSrc
+        };
+        const currentCart = JSON.parse(localStorage.getItem('korpa')) || [];
+        const productIndex = currentCart.findIndex((item) => item.id === proizvod.id);
+
+        if(productIndex !== -1) {
+            currentCart[productIndex].quantity += kolicina;
+        }
+        else {
+
+        currentCart.push(newItem);
+        }
+        localStorage.setItem('korpa', JSON.stringify(currentCart));
+        console.log(`${proizvod.name} dodan u korpu. Količina: ${kolicina}`);
     };
 
     return  (
@@ -33,8 +71,8 @@ export const Proizvod = () => {
                     <h1 className="text-3xl mb-2">{proizvod.ime}</h1>
                     <p className="mb-4">{proizvod.opis}</p>
                     <div className="flex items-center mt-2">
-                        <span className="text-gray-500 mr-2">Cijena:</span>
-                        <span className="text-red-600">{(parseFloat(proizvod.cijena)*kolicina).toFixed(2)} KM</span>
+                        <span className="mt-5 text-gray-500 mr-2">Cijena:</span>
+                        <span className="mt-5 text-red-600 font-bold">{(parseFloat(proizvod.price)).toFixed(2)} KM</span>
                     </div>
                     <div className="flex items-center mt-4">
                         <label htmlFor="kolicina" className="mr-2 text-gray-500">Količina:</label>
