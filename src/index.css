@@ -816,6 +816,7 @@ video {
   font-size: 24px;
   margin: 4px 2px;
   cursor: pointer;
+  
 }
 
 .dugme:hover{
@@ -829,3 +830,13 @@ video {
   box-shadow: 0px 4px 2px -2px rgba(182, 187, 196, 0.5);
 }
 
+@media screen and (max-width: 600px) {
+  .logo{
+    order: 0;
+    align-self: center;
+  }
+  .prijava{
+    margin: 0;
+  }
+  
+}

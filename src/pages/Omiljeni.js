@@ -32,11 +32,11 @@ export const Omiljeni = () => {
             </>
         ):(
           <>
-           <div className="container mx-auto mt-8 mb-20 px-4 sm:px-6 lg:px-8">
-             <div className="overflow-x-auto">
-          <table className=" text-left min-w-full text-left">
+           <div className="container pl-40 mx-auto mt-8 mb-20">
+          <table className=" text-left" style={{width: '900px'}}>
             <thead>
-              <tr className=" border-b borderB mb-5">
+    
+                <tr className=" border-b borderB mb-5">
                 <th className="py-2 pl-44">Proizvod</th>
                 <th className="py-2">Cijena</th>
               </tr>
@@ -44,8 +44,8 @@ export const Omiljeni = () => {
             <tbody>
             {omiljeniProizvodi.map((product) => (
               <tr key={product.id} className="border-b h-36 w-min-36 borderB">
-                <td className="py-2 flex items-center">
-                  <img src={product.slikaSrc} className="h-24 w-24 object-cover mr-4 rounded-lg"/>
+                <td className="py-2 flex flex-row items-center text-lg font-bold" style={{fontWeight: 'bold'}}>
+                  <img src={product.slikaSrc} className="h-36 mr-5 rounded-lg pl-5"/>
                   {product.ime}
                 </td>
                 <td className="py-2">{product.cijena ? product.cijena.toFixed(2) + ' KM' : 'N/A'}</td>
@@ -59,8 +59,8 @@ export const Omiljeni = () => {
 
             </tbody>
           </table>
-             </div>
-        <div className='flex justify-center mt-10'>
+          
+        <div className=' flex flex-row' style={{width: '500px'}}>
           
           <button onClick={() => window.history.back()} className="text-white font-bold py-2 px-4 rounded-xl mt-10 ml-2 mr-4 bg-customColor3 mb-4 w-1/2" >
             Nazad
@@ -70,8 +70,8 @@ export const Omiljeni = () => {
          </div>
          </>
         )}
-
-
+          
+        
 
       </div>
     </Layout>
