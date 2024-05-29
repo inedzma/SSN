@@ -6,7 +6,30 @@ export const Registracija = () => {
     const sifraRef = useRef(null);
     const usloviRef = useRef(null);
     const potvrdiSifruRef = useRef(null);
+    const imeRef = useRef(null);
+    const prezimeRef = useRef(null);
+
     useEffect(() => {
+        if (imeRef.current) {
+            imeRef.current.setCustomValidity('Molim Vas unesite ime');
+            imeRef.current.addEventListener('input', () => {
+                if (imeRef.current.value === '') {
+                    imeRef.current.setCustomValidity('Molim Vas unesite ime');
+                } else {
+                    imeRef.current.setCustomValidity('');
+                }
+            });
+        }
+        if (prezimeRef.current) {
+            prezimeRef.current.setCustomValidity('Molim Vas unesite prezime');
+            prezimeRef.current.addEventListener('input', () => {
+                if (prezimeRef.current.value === '') {
+                    prezimeRef.current.setCustomValidity('Molim Vas unesite prezime');
+                } else {
+                    prezimeRef.current.setCustomValidity('');
+                }
+            });
+        }
         if (emailRef.current) {
             emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
             emailRef.current.addEventListener('input', () => {
@@ -73,6 +96,7 @@ export const Registracija = () => {
                             </label>
                             <div className="mt-2">
                                 <input
+                                    ref={imeRef}
                                     id="ime"
                                     name="ime"
                                     type="name"
@@ -88,6 +112,7 @@ export const Registracija = () => {
                             </label>
                             <div className="mt-2">
                                 <input
+                                    ref={prezimeRef}
                                     id="prezime"
                                     name="prezime"
                                     type="prezime"
