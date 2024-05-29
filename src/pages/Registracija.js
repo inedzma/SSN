@@ -160,7 +160,7 @@ export const Registracija = () => {
                         </div>
                         
                         <form className="max-w-sm mx-auto">
-                              <label for="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Izaberite državu</label>
+                              <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Izaberite državu</label>
                               <select id="countries" className="bg-gray-50 border-0 text-gray-900 text-sm rounded-lg ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 block w-full p-2.5 dark:bg-gray-700 dark:ring-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-600">
                                 <option>Bosna i Hercegovina</option>
                                 <option>Hrvatska</option>
@@ -173,7 +173,7 @@ export const Registracija = () => {
                           <div className="flex items-center h-5">
                             <input ref={usloviRef} id="terms" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
                           </div>
-                          <label for="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Slažem se sa <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">uslovima</a></label>
+                          <label htmlFor="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Slažem se sa <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">uslovima</a></label>
                         </div>
                         <div>
                             <button
