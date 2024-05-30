@@ -12,8 +12,9 @@ module.exports = {
       customColor1: 'rgb(209,192,174)',
       customColor2: 'rgb(104,91,81)',
       customColor3: 'rgba(104,91,81,0.7)',
-      customColor4: 'rgb(227,219,219)',
+      customColor4: 'rgb(246,245,245)',
       customColor5: 'rgba(195,174,151,0.4)',
+      customColor6: 'rgb(227,219,219)',
     },
 },
   plugins: [

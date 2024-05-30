@@ -42,7 +42,7 @@ export const Pocetna = () => {
 
     return (
         <Layout>
-            <div className="bg-customColor5 relative overflow-hidden">
+            <div className="bg-gradient-to-b from-customColor to-customColor4 bg-cover bg-center relative overflow-hidden">
                 <div className="custom-padding-bottom pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
                     <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
                         <div className="sm:max-w-lg">
@@ -130,9 +130,30 @@ export const Pocetna = () => {
             </div>
             <div className="bg-gray-100 ">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mx-auto max-w-2xl sm:py-24 lg:max-w-none lg:py-24">
-                        <h2 className="text-2xl font-bold text-gray-900 sm:pt-0 mt-8">Kategorije</h2>
-                        <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+                    <div className="mx-auto max-w-2xl sm:py-24 lg:max-w-none lg:py-14">
+                        <h1 className="text-3xl font-bold text-gray-900 mt-4 sm:pt-0 ">Kategorije</h1>
+                        <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-12 lg:space-y-0">
+                            {kategorija.map((kategorija) => (
+                                <div key={kategorija.ime} className="group relative">
+                                    <div
+                                        className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                        <img
+                                            src={kategorija.slikaSrc}
+                                            alt={kategorija.slikaAlt}
+                                            className="h-full w-full object-cover object-center"
+                                        />
+                                    </div>
+                                    <h3 className="mt-6 text-sm text-gray-500">
+                                        <a href={kategorija.href}>
+                                            <span className="absolute inset-0"/>
+                                        </a>
+                                    </h3>
+                                    <p className="text-xl font-medium text-gray-900">{kategorija.ime}</p>
+                                    <p className="text-base font-normal text-gray-900">{kategorija.opis}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-12 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-12 lg:space-y-0">
                             {kategorija.map((kategorija) => (
                                 <div key={kategorija.ime} className="group relative">
                                     <div
@@ -156,7 +177,7 @@ export const Pocetna = () => {
                     </div>
                 </div>
             </div>
-            <div className="relative isolate overflow-hidden hover:bg-white py-16 sm:py-24 lg:py-32">
+            <div className="relative isolate overflow-hidden hover:bg-white py-16 mt-4 sm:py-24 lg:py-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
                         <div className="max-w-xl lg:max-w-lg">
