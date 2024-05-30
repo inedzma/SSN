@@ -854,3 +854,18 @@ video {
   }
 }
 
+@media (max-width: 450px){
+  .sakrijNaTelefonu{
+    display: none;
+  }
+}
+
+@media (max-width: 1024px){
+  .proizvod{
+    flex-direction: column;
+  }
+  .opis{
+    padding-right: 20px;
+  }
+}
+

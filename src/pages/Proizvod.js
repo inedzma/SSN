@@ -60,13 +60,13 @@ export const Proizvod = () => {
 
     return (
         <Layout>
-            <div className="flex max-w-6xl mx-auto mt-24 mb-24 my-4 pl-20">
+            <div className="proizvod flex justify-center items-center max-w-6xl mx-auto mt-16 mb-24 my-4">
                 <div className="flex-none p-4">
                     <div className="mb-4 max-w-md">
                         <img src={proizvod.slikaSrc} alt={proizvod.slikaAlt} className="rounded max-w-full h-auto" />
                     </div>
                 </div>
-                <div className="flex-2 pl-16 mt-16">
+                <div className="opis pl-10 flex-2 mt-16 justify-center align-center">
                     <h1 className="text-3xl mb-2">{proizvod.ime}</h1>
                     <p className="mb-4">{proizvod.opis}</p>
                     <div className="flex items-center mt-2">
@@ -85,18 +85,20 @@ export const Proizvod = () => {
                             className="border rounded p-1 w-14 text-center"
                         />
                     </div>
+                    <div className="">
                     <div className="flex mt-12">
                         <FiShoppingCart className="ml-12 size-6 mr-3 text-gray-500" style={{ pointerEvents: 'none' }} />
                         <FiHeart className="size-6 ml-40 mr-2 text-gray-500" style={{ pointerEvents: 'none' }} />
                     </div>
                     <div className="flex items-center mt-4">
                         <button onClick={handleAddToCart}
-                                className="bg-customColor2 rounded text-white py-2 px-4 mt-4 hover:bg-customColor">Dodaj u korpu
+                                className="bg-customColor2 font-bold rounded text-white py-2 px-4 mt-4 hover:bg-customColor">Dodaj u korpu
                         </button>
                         <button onClick={handleAddToFavorites}
-                                className="ml-12 bg-customColor2 rounded text-white py-2 px-4 mt-4 hover:bg-customColor">Dodaj u
+                                className="ml-12 bg-customColor2 font-bold rounded text-white py-2 px-4 mt-4 hover:bg-customColor">Dodaj u
                             omiljene
                         </button>
+                    </div>
                     </div>
                 </div>
             </div>
