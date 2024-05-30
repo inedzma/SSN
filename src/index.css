@@ -860,12 +860,15 @@ video {
   }
 }
 
-@media (max-width: 1024px){
-  .proizvod{
+@media (max-width: 1024px) {
+  .proizvod {
     flex-direction: column;
   }
-  .opis{
+
+  .opis {
     padding-right: 20px;
   }
 }
-
+.custom-padding-bottom {
+  padding-bottom: 35rem;
+}
