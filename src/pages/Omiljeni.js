@@ -74,7 +74,7 @@ export const Omiljeni = () => {
         
 
       </div>
-      <div>
+      <div className='sm:hidden'>
        
         {omiljeniProizvodi.length === 0 ? (
             <>

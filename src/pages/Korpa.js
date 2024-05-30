@@ -112,7 +112,7 @@ export const Korpa = () => {
         
 
       </div>
-      <div>
+      <div className='sm:hidden'>
        
        {korpaProizvodi.length === 0 ? (
            <>
