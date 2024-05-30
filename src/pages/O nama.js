@@ -60,14 +60,14 @@ export const ONama = () => {
 
                 
                 </div>
-                <div className="flex justify-center items-center flex-col font-semibold text-customColor2 text-[1.2rem]  ">
+                <div className="flex justify-center items-center flex-col font-semibold text-customColor2 text-[1.2rem] mt-8">
                     Naša Lokacija
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4008.4319846024578!2d104.90963508577306!3d11.588733789197796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095362d82280bf%3A0xa3fbb989cb2c069c!2sSSN%20JewelryStore!5e0!3m2!1shr!2sba!4v1716801458515!5m2!1shr!2sba"
-                    width="600"
-                    height="450"
-                    className="rounded-2xl"
-                    style={{ border: 0, margin: 20 }}
+                    width="100%"
+                    height="auto"
+                    className="w-full h-64 sm:h-80 md:h-96 lg:h-[450px] rounded-2xl my-8"
+                    style={{ border: 0}}
                     allowFullScreen=""
                     loading="lazy"
                     title="karta"

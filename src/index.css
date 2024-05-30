@@ -847,3 +847,10 @@ video {
 .hoover:hover{
   background-color: hsl(29, 20%, 71%);
 }
+
+@media (max-width: 1024px) {
+  #navbar-search {
+    display: none;
+  }
+}
+
