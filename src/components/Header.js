@@ -18,7 +18,7 @@ export const Header = () => {
     }
     return (
         <>
-            <nav className="bg-customColor border-gray-200 relative">
+            <nav className="bg-customColor border-gray-200 sticky top-0 z-50">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <button onClick={handleOnClick2} data-collapse-toggle="default-sidebar" type="button"
                                 className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
