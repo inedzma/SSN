@@ -1,6 +1,6 @@
 import './App.css';
 
-import {BrowserRouter, Route, Routes, ScrollRestoration} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Pocetna} from "./pages/Pocetna";
 import {Prijava} from "./pages/Prijava";
 import {Registracija} from "./pages/Registracija";

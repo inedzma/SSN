@@ -55,6 +55,7 @@ export const ONama = () => {
                                 height={1442}
                             />
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -76,7 +77,6 @@ export const ONama = () => {
                     </div>
                 </div>
             </div>
-
         </Layout>
     )
 }
