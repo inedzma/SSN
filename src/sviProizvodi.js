@@ -9,7 +9,7 @@ export const sviProizvodi = [
         slikaAlt: 'Neki opis proizvoda',
     },
     {
-        id: 1,
+        id: 10,
         ime: 'Zlatni lančić',
         opis: 'Ovaj zlatni lančić je savršen dodatak svakom outfitu. Dizajniran je za žene koje cijene stil, sofisticiranost i individualnost. Vjerujemo da nakit ima moć da promijeni način na koji se osjećate, dodajući dašak luksuza i elegancije vašem izgledu',
         kategorija: "Ogrlice",

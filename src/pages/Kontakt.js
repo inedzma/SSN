@@ -52,21 +52,21 @@ export const Kontakt = () => {
                                 poslovnim planovima? Tu smo za vas.</p>
                             <form action="#" className="space-y-8">
                                 <div>
-                                    <label for="email"
+                                    <label htmlFor="email"
                                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">E-mail</label>
                                     <input ref={emailRef} type="email" id="email"
                                            className="p-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-gray-700 dark:ring-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-600"
                                            placeholder="imeprezime@gmail.com" required/>
                                 </div>
                                 <div>
-                                    <label for="subject"
+                                    <label htmlFor="subject"
                                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Predmet</label>
                                     <input ref={predmetRef} type="text" id="subject"
                                            className="p-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-gray-700 dark:ring-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-600"
                                            placeholder="Kako Vam možemo pomoći?" required/>
                                 </div>
                                 <div className="sm:col-span-2">
-                                    <label for="message"
+                                    <label htmlFor="message"
                                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Poruka</label>
                                     <textarea ref={porukaRef} id="message" rows="6"
                                               className="p-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 dark:bg-gray-700 dark:ring-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-600"

@@ -184,7 +184,7 @@ export const Registracija = () => {
 
                         </div>
                         
-                        <form className="max-w-sm mx-auto">
+                        <div className="max-w-sm mx-auto">
                               <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Izaberite državu</label>
                               <select id="countries" className="bg-gray-50 border-0 text-gray-900 text-sm rounded-lg ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 block w-full p-2.5 dark:bg-gray-700 dark:ring-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-600">
                                 <option>Bosna i Hercegovina</option>
@@ -192,7 +192,7 @@ export const Registracija = () => {
                                 <option>Srbija</option>
                                 <option>Crna Gora</option>
                               </select>
-                            </form>
+                            </div>
 
                         <div className="flex items-start mb-5">
                           <div className="flex items-center h-5">
