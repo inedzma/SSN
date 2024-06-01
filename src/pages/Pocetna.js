@@ -3,6 +3,21 @@ import Layout from "../components/Layout";
 
 
 export const Pocetna = () => {
+    const emailRef = useRef(null);
+    useEffect(() => {
+        if (emailRef.current) {
+            emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
+            emailRef.current.addEventListener('input', () => {
+                    if (emailRef.current.value === '') {
+                        emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
+                    } else if (!emailRef.current.value.includes('@')) {
+                        emailRef.current.setCustomValidity('Email mora sadržavati @');
+                    } else {
+                        emailRef.current.setCustomValidity('');
+                    }
+                }
+            );
+        }  }, []);
     const kategorija = [
         {
             ime: 'Ogrlice',
@@ -47,31 +62,16 @@ export const Pocetna = () => {
             href: '/Privjesci',
         },
     ];
-    const emailRef = useRef(null);
-    useEffect(() => {
-        if (emailRef.current) {
-            emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
-            emailRef.current.addEventListener('input', () => {
-                if (emailRef.current.value === '') {
-                    emailRef.current.setCustomValidity('Molim Vas unesite ispravnu email adresu');
-                } else if (!emailRef.current.value.includes('@')) {
-                    emailRef.current.setCustomValidity('Email mora sadržavati @');
-                } else {
-                    emailRef.current.setCustomValidity('');
-                }
-            }
-            );
-        }  }, []);
     return (
         <Layout>
             <div className="bg-gradient-to-b from-customColor to-customColor4 bg-cover bg-center relative overflow-hidden">
                 <div className="custom-padding-bottom pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
                     <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
                         <div className="sm:max-w-lg">
-                            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                            <h1 className="text-4xl font-bold tracking-tight text-textBoja sm:text-6xl">
                                 Ljetna kolekcija je stigla!
                             </h1>
-                            <p className="mt-4 text-xl text-gray-500">
+                            <p className="mt-4 text-xl text-textBoja">
                                 Otkrijte našu najnoviju kolekciju nakita inspirisanu ljetnim sjajem i prirodnim
                                 ljepotama. Bez obzira na priliku, naši jedinstveni dizajni savršeno će upotpuniti vaš
                                 stil!
@@ -153,12 +153,12 @@ export const Pocetna = () => {
             <div className="bg-gray-100 ">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl sm:py-24 lg:max-w-none lg:py-14">
-                        <h1 className="text-3xl font-bold text-gray-900 mt-4 sm:pt-0 ">Kategorije</h1>
-                        <div className="mt-12 mb-12 space-y-8 lg:grid lg:grid-cols-3 lg:gap-x-12 lg:space-y-0">
+                        <h1 className="text-3xl font-bold text-textBoja mt-4 pb-0 sm:pt-0">Kategorije</h1>
+                        <div className=" mb-12 space-y-8 lg:grid lg:grid-cols-3 lg:gap-x-12 lg:space-y-0">
                             {kategorija.map((kategorija) => (
                                 <div key={kategorija.ime} className="group relative">
                                     <div
-                                        className="mt-16 relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                        className="mt-24 relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                         <img
                                             src={kategorija.slikaSrc}
                                             alt={kategorija.slikaAlt}
@@ -167,11 +167,11 @@ export const Pocetna = () => {
                                     </div>
                                     <h3 className="mt-6 text-sm text-gray-500">
                                         <a href={kategorija.href}>
-                                            <span className="absolute inset-0 my-10" />
+                                            <span className="absolute inset-0 my-10"/>
                                         </a>
                                     </h3>
-                                    <p className="text-xl font-medium text-gray-900">{kategorija.ime}</p>
-                                    <p className="text-base font-normal text-gray-900">{kategorija.opis}</p>
+                                    <p className="text-xl font-medium text-textBoja">{kategorija.ime}</p>
+                                    <p className="text-base font-normal text-textBoja">{kategorija.opis}</p>
                                 </div>
                             ))}
                         </div>
@@ -182,10 +182,10 @@ export const Pocetna = () => {
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
                         <div className="max-w-xl lg:max-w-lg">
-                            <h2 className="text-3xl font-bold tracking-tight text-customColor2 sm:text-4xl">Prijavi se
+                            <h2 className="text-3xl font-bold tracking-tight text-textBoja sm:text-4xl">Prijavi se
                                 na naš
                                 newsletter!</h2>
-                            <p className="mt-4 text-lg leading-8 text-gray-300"> Budite uvijek u toku sa najnovijim
+                            <p className="mt-4 text-lg leading-8 text-textBoja"> Budite uvijek u toku sa najnovijim
                                 vijestima,
                                 ekskluzivnim ponudama i posebnim događajima. Naš informativni bilten donosi vam redovne
                                 ažuriranja direktno u vaš inbox, tako da nikada ne propustite važnu informaciju.
@@ -206,7 +206,7 @@ export const Pocetna = () => {
                                 />
                                 <button
                                     type="submit"
-                                    className="flex-none rounded-md bg-white border px-3.5 py-2.5 text-sm font-bold text-customColor2 shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                                    className="flex-none rounded-md bg-white border px-3.5 py-2.5 text-sm font-bold text-textBoja shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                                 >
                                     Prijavi se!
                                 </button>
@@ -217,8 +217,8 @@ export const Pocetna = () => {
                                 <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
                                     <img src="/discount.png" className="h-6 w-6 text-white" aria-hidden="true"/>
                                 </div>
-                                <dt className="mt-4 font-semibold text-customColor2">Ekskluzivne ponude!</dt>
-                                <dd className="mt-2 leading-7 text-gray-400">
+                                <dt className="mt-4 font-semibold text-textBoja">Ekskluzivne ponude!</dt>
+                                <dd className="mt-2 leading-7 text-textBoja">
                                     Samo pretplatnici našeg newslettera imaju pristup posebnim popustima i promocijama
                                     koje nisu
                                     dostupne drugima.
@@ -228,8 +228,8 @@ export const Pocetna = () => {
                                 <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
                                     <img src="/privacy.png" className="h-6 w-6 text-white" aria-hidden="true"/>
                                 </div>
-                                <dt className="mt-4 font-semibold text-customColor2">Bez spama!</dt>
-                                <dd className="mt-2 leading-7 text-gray-400">
+                                <dt className="mt-4 font-semibold text-textBoja">Bez spama!</dt>
+                                <dd className="mt-2 leading-7 text-textBoja">
                                     Obećavamo da ćemo vam slati samo kvalitetan sadržaj. Naš cilj je da vas informišemo,
                                     a ne da
                                     vas zatrpamo nepotrebnim porukama.
