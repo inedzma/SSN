@@ -203,7 +203,7 @@ export const Registracija = () => {
                         <div>
                             <button
                                 type="submit"
-                                className="flex w-full justify-center rounded-md  bg-Dugme hover:bg-customColor px-3 py-1.5 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-customColor3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="flex w-full justify-center rounded-md  bg-Dugme hover:bg-customColor px-3 py-1.5 text-lg font-semibold leading-6 text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Registrujte se
                             </button>
