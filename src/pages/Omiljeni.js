@@ -108,7 +108,7 @@ export const Omiljeni = () => {
               </td>
                 <td>
                   <button onClick={() => removeFromFavorites(product.id)} className="font-medium text-DugmeUkloni hover:text-red-500">
-                    x
+                    X
                   </button>
                 </td>
               </tr>

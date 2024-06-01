@@ -34,14 +34,14 @@ const Popover = ({ targetId, message }) => {
         <div className="w-full flex justify-center items-center">
             <div
                 ref={popoverRef}
-                className={`p-2 absolute z-10 w-2/5 m-2 text-sm text-gray-500 transition-opacity duration-300 bg-customColor6 rounded-lg shadow-sm dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 ${
+                className={`p-2 absolute z-10 w-2/5 m-2 text-sm text-gray-500 transition-opacity duration-300 bg-customColor1 rounded-lg shadow-sm dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 ${
                     visible ? 'opacity-100 visible' : 'opacity-0 invisible'
                 }`}
                 style={{ top: '75px' }} // Adjust position as needed
             >
                 <div className="flex items-center justify-between px-3 py-2 bg-gray-100 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
                     <div className="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 text-green-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green" className="size-6 text-green-500">
                             <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clipRule="evenodd" />
                         </svg>
                         <h3 className="pl-3 font-semibold text-gray-900 dark:text-white">
@@ -49,7 +49,7 @@ const Popover = ({ targetId, message }) => {
                         </h3>
                     </div>
                     <a href={targetId === "popoverKorpa" ? "/korpa" : "/omiljeni"}>
-                        <button className="bg-customColor text-white font-bold py-2 px-3 rounded-lg hover:bg-blue-600">
+                        <button className="bg-Dugme hover:bg-customColor text-white font-bold py-2 px-3 rounded-lg hover:bg-blue-600">
                             {targetId === "popoverKorpa" ? "Vidi korpu" : "Vidi omiljene"}
                         </button>
                     </a>
