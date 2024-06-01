@@ -9,29 +9,29 @@ export const ONama = () => {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                         <div className="lg:pr-8 lg:pt-4">
                             <div className="lg:max-w-lg">
-                                <p className="mt-2 text-2xl font-bold tracking-tight text-customColor2 sm:text-3xl">
+                                <p className="mt-12 text-2xl font-bold tracking-tight text-textBoja sm:text-3xl">
                                     Dobro došli na SSN
                                 </p>
-                                <p className="mt-6 text-base leading-7 text-gray-600">
+                                <p className="mt-6 text-base leading-7 text-textBoja">
                                     Vaša destinacija za elegantan i moderan nakit koji naglašava vašu jedinstvenu
                                     ljepotu. Naša online prodavnica specijalizirana je za pružanje visokokvalitetnog,
                                     elegantnog nakita dizajniranog za žene koje cijene stil, sofisticiranost i
                                     individualnost.
                                 </p>
-                                <ul className="mt-4 space-y-4 text-base leading-7 text-gray-600">
+                                <ul className="mt-4 space-y-4 text-base leading-7 text-textBoja">
                                     <li className="relative pl-6">
-                                        <span className="font-semibold text-customColor2 text-[1rem]">Naša misija</span>{' '}
+                                        <span className="font-semibold text-textBoja text-[1rem]">Naša misija</span>{' '}
                                         <br/>
                                         <span className="inline-block">Naša misija je da vam ponudimo nakit koji nije samo modni dodatak, već izražaj vaše ličnosti. Svaki komad iz naše kolekcije pažljivo je odabran i dizajniran da bude savršeni dodatak vašem svakodnevnom stilu ili posebnim prilikama. Vjerujemo da nakit ima moć da promijeni način na koji se osjećate, dodajući dašak luksuza i elegancije vašem izgledu.
                                         </span>
                                     </li>
                                     <li className="relative pl-6">
-                                        <span className="font-semibold text-customColor2 text-[1rem]">Naša vizija</span>{' '}
+                                        <span className="font-semibold text-textBoja text-[1rem]">Naša vizija</span>{' '}
                                         <br/>
                                         <span className="inline-block">Težimo da postanemo što bolji tim u izradi nakita, poznatog po svojoj kvaliteti, jedinstvenim dizajnima i izvrsnoj korisničkoj podršci. Cilj nam je izgraditi zajednicu zadovoljnih kupaca koji će nas preporučivati zbog naše predanosti kvaliteti i kupcima.</span>
                                     </li>
                                     <li className="relative pl-6">
-                                        <span className="font-semibold text-customColor2 text-[1rem]">Naš asortiman</span>{' '}
+                                        <span className="font-semibold text-textBoja text-[1rem]">Naš asortiman</span>{' '}
                                         <br/>
                                         <span className="inline-block">U našoj kolekciji možete pronaći različite vrste nakita:
                                             <ul className="list-disc ml-4">
@@ -59,7 +59,7 @@ export const ONama = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-12 flex justify-center items-center flex-col font-semibold text-customColor2 text-[1rem] sm:text-[1.2rem] mb-8 sm:mb-10 mx-4 sm:mx-auto max-w-[800px] sm:max-w-none">
+            <div className="py-12 flex justify-center items-center flex-col font-semibold text-textBoja text-[1rem] sm:text-[1.2rem] mb-8 sm:mb-10 mx-4 sm:mx-auto max-w-[800px] sm:max-w-none">
                 <h2 className="mb-8">Naša Lokacija</h2>
                 <div className="w-full max-w-[800px] sm:max-w-none px-4 sm:px-8 lg:px-8">
                     <div className="aspect-w-16 aspect-h-9">

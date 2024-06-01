@@ -24,8 +24,8 @@ export const Korpa = () => {
             <>
             <div className="flex flex-col justify-center items-center">
               <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-28/90/empty_cart-512.png"  alt="empty-cart" className="mt-32 h-64"/>
-              <h1 className="mt-10 mb-10 text-center text-3xl font-bold">Vaša korpa je prazna</h1>
-            <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20 bg-customColor3  text-white">
+              <h1 className="mt-10 mb-10 text-center text-textBoja text-3xl font-bold">Vaša korpa je prazna</h1>
+            <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20 bg-Dugme hover:bg-customColor text-white">
             Nastavi s kupovinom
           </button>
            
@@ -38,26 +38,26 @@ export const Korpa = () => {
           <table className=" text-left " >
             <thead>
               <tr className=" border-b borderB mb-5">
-                <th className="p-3 pl-44">Proizvod</th>
-                <th className="p-3 text-center">Cijena</th>
-                <th className="p-3 text-center">Količina</th>
-                <th className="p-3 text-center">Ukupno</th>
+                <th className="p-3 text-textBoja pl-44">Proizvod</th>
+                <th className="p-3 text-textBoja text-center">Cijena</th>
+                <th className="p-3 text-textBoja text-center">Količina</th>
+                <th className="p-3 text-textBoja text-center">Ukupno</th>
               </tr>
             </thead>
             <tbody>
               {korpaProizvodi.map((product) => (
                 <tr key={product.id} className="border-b h-36 w-min-36 borderB">
-                  <td className="p-3 flex flex-row items-center text-lg " style={{fontWeight: 'bold'}}>
+                  <td className="p-3 flex flex-row items-center text-textBoja text-lg " style={{fontWeight: 'bold'}}>
                     <img src={product.slikaSrc} className="h-36 mr-5 rounded-lg pl-5"/>
                     {product.ime}</td>
-                  <td className="p-3 text-center">{product.cijena ? product.cijena.toFixed(2) + ' KM' : 'N/A'}</td>
-                  <td className="p-3 text-center">{product.quantity}</td>
-                  <td className="p-3 text-center">
+                  <td className="p-3 text-textBoja text-center">{product.cijena ? product.cijena.toFixed(2) + ' KM' : 'N/A'}</td>
+                  <td className="p-3 text-textBoja text-center">{product.quantity}</td>
+                  <td className="p-3 text-textBoja text-center">
                     {(parseFloat(product.cijena) * product.quantity).toFixed(2)} KM
                   </td>
                   <td>
                     <button onClick={() => removeFromCart(product.id)}
-                      className="p-3 font-medium text-red-600 hover:text-red-500">
+                      className="ml-6 p-2 font-medium text-white rounded-lg bg-DugmeUkloni hover:text-red-500">
                       Ukloni
                     </button>
                   </td>
@@ -69,26 +69,26 @@ export const Korpa = () => {
           <table className=' my-10'>
             <tbody>
               <tr className="h-20 border-b borderB">
-                <td className='text-xl font-bold'>
+                <td className='text-textBoja text-xl font-bold'>
                   Ukupno: 
                 </td>
-                <td className='text-right pr-3'>
+                <td className='text-textBoja text-right pr-3'>
                   {ukupnaCijena.toFixed(2)} KM
                 </td>
               </tr>
               <tr className="h-20 border-b borderB">
-                <td className='text-xl font-bold'>
+                <td className='text-textBoja text-xl font-bold'>
                   Dostava:
                 </td>
-                <td className='text-right pr-3'>
+                <td className='text-textBoja text-right pr-3'>
                   10 KM
                 </td>
               </tr>
               <tr className="h-20 border-b borderB">
-                <td className='text-xl font-bold'>
+                <td className='text-textBoja text-xl font-bold'>
                   Ukupno sa dostavom:
                 </td>
-                <td className='text-right pr-3'>
+                <td className='text-textBoja text-right pr-3'>
                   {(ukupnaCijena + 10).toFixed(2)} KM
                 </td>
               </tr>
@@ -98,10 +98,10 @@ export const Korpa = () => {
         </div>
         <div className=' flex flex-row ' style={{width: '500px'}}>
           
-          <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
+          <button onClick={() => window.history.back()} className="text-white bg-Dugme hover:bg-customColor font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
             Nastavi s kupovinom
           </button>
-          <button className=" font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white  bg-customColor w-full ">
+          <button className=" font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white bg-Dugme hover:bg-customColor ">
             NARUČI
           </button>
          </div>
@@ -119,7 +119,7 @@ export const Korpa = () => {
            <div className="flex flex-col justify-center items-center">
              <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-28/90/empty_cart-512.png"  alt="empty-cart" className="mt-32 h-64"/>
              <h1 className="mt-10 mb-10 text-center text-3xl font-bold">Vaša korpa je prazna</h1>
-           <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20 bg-customColor3  text-white">
+           <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20  bg-Dugme hover:bg-customColor text-white">
            Nastavi s kupovinom
          </button>
           
@@ -148,7 +148,7 @@ export const Korpa = () => {
                  </td>
                  <td>
                    <button onClick={() => removeFromCart(product.id)}
-                     className="p-3 font-medium text-red-600 hover:text-red-500">
+                     className="hover:bg-customColor rounded-lg p-2 font-medium text-DugmeUkloni hover:text-red-500">
                       X
                    </button>
                  </td>
@@ -189,10 +189,10 @@ export const Korpa = () => {
        </div>
        <div className=' flex flex-row'>
          
-         <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
+         <button onClick={() => window.history.back()} className=" bg-Dugme hover:bg-customColor text-white font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
            Nastavi s kupovinom
          </button>
-         <button className=" font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white  bg-customColor w-full ">
+         <button className=" bg-Dugme hover:bg-customColor font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white">
            NARUČI
          </button>
         </div>

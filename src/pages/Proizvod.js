@@ -122,11 +122,11 @@ export const Proizvod = () => {
                     <h1 className="text-3xl mb-2">{proizvod.ime}</h1>
                     <p className="mb-4">{proizvod.opis}</p>
                     <div className="flex items-center mt-2">
-                        <span className="mt-5 text-gray-500 mr-2">Cijena:</span>
-                        <span className="mt-5 text-red-600 font-bold">{(parseFloat(proizvod.cijena)).toFixed(2)} KM</span>
+                        <span className="mt-5 text-textBoja mr-2">Cijena:</span>
+                        <span className="mt-5 text-textBoja font-bold">{(parseFloat(proizvod.cijena)).toFixed(2)} KM</span>
                     </div>
                     <div className="flex items-center mt-4">
-                        <label htmlFor="kolicina" className="mr-2 text-gray-500">Količina:</label>
+                        <label htmlFor="kolicina" className="mr-2 text-textBoja">Količina:</label>
                         <input
                             type="number"
                             id="kolicina"
@@ -139,15 +139,15 @@ export const Proizvod = () => {
                     </div>
                     <div className="">
                         <div className="flex mt-12">
-                            <FiShoppingCart className="ml-12 size-6 mr-3 text-gray-500" style={{ pointerEvents: 'none' }} />
-                            <FiHeart className="size-6 ml-40 mr-2 text-gray-500" style={{ pointerEvents: 'none' }} />
+                            <FiShoppingCart className="ml-12 size-6 mr-3 text-textBoja" style={{ pointerEvents: 'none' }} />
+                            <FiHeart className="size-6 ml-40 mr-2 text-textBoja" style={{ pointerEvents: 'none' }} />
                         </div>
                         <div className="flex items-center mt-4">
                             <button data-popover id="popoverKorpa" onClick={handleAddToCart}
-                                className="bg-customColor2 font-bold rounded text-white py-2 px-4 mt-4 hover:bg-customColor">Dodaj u korpu
+                                className="bg-Dugme font-bold rounded text-white py-2 px-4 mt-4 hover:bg-customColor">Dodaj u korpu
                             </button>
                             <button data-popover id="popoverOmiljeni" onClick={handleAddToFavorites}
-                                className="ml-12 bg-customColor2 font-bold rounded text-white py-2 px-4 mt-4 hover:bg-customColor">Dodaj u
+                                className="ml-12 bg-Dugme hover:bg-customColor font-bold rounded text-white py-2 px-4 mt-4 ">Dodaj u
                                 omiljene
                             </button>
                         </div>

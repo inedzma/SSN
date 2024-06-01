@@ -206,7 +206,7 @@ export const Pocetna = () => {
                                 />
                                 <button
                                     type="submit"
-                                    className="flex-none rounded-md bg-white border px-3.5 py-2.5 text-sm font-bold text-textBoja shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                                    className="flex-none rounded-md  bg-Dugme hover:bg-customColor  border px-3.5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                                 >
                                     Prijavi se!
                                 </button>
