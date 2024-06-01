@@ -25,7 +25,7 @@ export const Korpa = () => {
             <div className="flex flex-col justify-center items-center">
               <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-28/90/empty_cart-512.png"  alt="empty-cart" className="mt-32 h-64"/>
               <h1 className="mt-10 mb-10 text-center text-textBoja text-3xl font-bold">Vaša korpa je prazna</h1>
-            <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20 bg-Dugme hover:bg-customColor text-white">
+            <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20 border border-black text-textBoja">
             Nastavi s kupovinom
           </button>
            
@@ -85,7 +85,7 @@ export const Korpa = () => {
                 </td>
               </tr>
               <tr className="h-20 border-b borderB">
-                <td className='text-textBoja text-xl font-bold'>
+                <td className='pr-4text-textBoja text-xl font-bold pr-16'>
                   Ukupno sa dostavom:
                 </td>
                 <td className='text-textBoja text-right pr-3'>
@@ -98,7 +98,7 @@ export const Korpa = () => {
         </div>
         <div className=' flex flex-row ' style={{width: '500px'}}>
           
-          <button onClick={() => window.history.back()} className="text-white bg-Dugme hover:bg-customColor font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
+          <button onClick={() => window.history.back()} className="text-textBoja font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
             Nastavi s kupovinom
           </button>
           <button className=" font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white bg-Dugme hover:bg-customColor ">
@@ -119,7 +119,7 @@ export const Korpa = () => {
            <div className="flex flex-col justify-center items-center">
              <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-28/90/empty_cart-512.png"  alt="empty-cart" className="mt-32 h-64"/>
              <h1 className="mt-10 mb-10 text-center text-3xl font-bold">Vaša korpa je prazna</h1>
-           <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20  bg-Dugme hover:bg-customColor text-white">
+           <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20 border border-black text-textBoja">
            Nastavi s kupovinom
          </button>
           
@@ -157,7 +157,7 @@ export const Korpa = () => {
            </tbody>
          </table>
          <div>
-         <table className='w-72 my-10'>
+         <table className='w-72 my-10 space-y-8'>
            <tbody>
              <tr className="h-20 border-b borderB">
                <td className='text-xl font-bold'>
@@ -176,10 +176,10 @@ export const Korpa = () => {
                </td>
              </tr>
              <tr className="h-20 border-b borderB">
-               <td className='text-xl font-bold pr-3'>
+               <td className='text-xl font-bold pr-10'>
                  Ukupno sa dostavom:
                </td>
-               <td className='text-right pr-3'>
+               <td className='text-right'>
                  {(ukupnaCijena + 10).toFixed(2)} KM
                </td>
              </tr>
@@ -189,7 +189,7 @@ export const Korpa = () => {
        </div>
        <div className=' flex flex-row'>
          
-         <button onClick={() => window.history.back()} className=" bg-Dugme hover:bg-customColor text-white font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
+         <button onClick={() => window.history.back()} className="font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
            Nastavi s kupovinom
          </button>
          <button className=" bg-Dugme hover:bg-customColor font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white">
