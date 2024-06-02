@@ -14,7 +14,7 @@ export const TrazeniProizvod = ({ onSearch }) => {
 
     return (
         <Layout onSearch={onSearch}>  
-            <h1 className="mx-auto max-w-2xl px-4 py-10 sm:px-6  lg:max-w-7xl lg:px-8 font-bold text-lg ">Rezultati pretrage za: "{searchTerm}"</h1>
+            <h1 className="mx-auto max-w-2xl px-4 py-10 sm:px-6  lg:max-w-7xl lg:px-8 font-bold text-2xl  mb-6 tracking-tight text-textBoja ">Rezultati pretrage za: "{searchTerm}"</h1>
             <div className="bg-white">
                 <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8">
                     {filteredProizvod.length > 0 ? (
@@ -25,7 +25,7 @@ export const TrazeniProizvod = ({ onSearch }) => {
                                         <img
                                             src={proizvod.slikaSrc}
                                             alt={proizvod.slikaAlt}
-                                            className="h-full w-full object-cover object-center group-hover:opacity-75"
+                                            className="h-80 w-full object-cover object-center group-hover:opacity-75"
                                         />
                                     </div>
                                     <h3 className="mt-4 text-sm text-gray-700">{proizvod.ime}</h3>

@@ -21,49 +21,49 @@ export const Pocetna = ({onSearch}) => {
             );
         }  }, []);
 
-    const kategorija = [
-        {
-            ime: 'Ogrlice',
-            opis: 'Work from home accessories',
-            slikaSrc: '/ogrlica1.jpeg',
-            slikaAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-            href: '/Ogrlice',
-        },
-        {
-            ime: 'Pokloni',
-            opis: 'Journals and note-taking',
-            slikaSrc: '/slika-slide1.png',
-            slikaAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
-            href: '/Pokloni',
-        },
-        {
-            ime: 'Privjesci',
-            opis: 'Daily commute essentials',
-            slikaSrc: '/reklama2.png',
-            slikaAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-            href: '/Privjesci',
-        },
-        {
-            ime: 'Narukvice',
-            opis: 'Daily commute essentials',
-            slikaSrc: '/reklama2.png',
-            slikaAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-            href: '/Privjesci',
-        },
-        {
-            ime: 'Naušnice',
-            opis: 'Daily commute essentials',
-            slikaSrc: '/reklama2.png',
-            slikaAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-            href: '/Privjesci',
-        },
-        {
-            ime: 'Prstenje',
-            opis: 'Daily commute essentials',
-            slikaSrc: '/reklama2.png',
-            slikaAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-            href: '/Privjesci',
-        },
+        const kategorija = [
+            {
+                ime: 'Ogrlice',
+                opis: 'Elegantne i moderne ogrlice koje će upotpuniti svaki stil.',
+                slikaSrc: '/Ogrlica1.jpeg',
+                slikaAlt: 'Prelijepa zlatna ogrlica prikazana na stalku za nakit.',
+                href: '/Ogrlice',
+            },
+            {
+                ime: 'Pokloni',
+                opis: 'Savršeni pokloni za svaku priliku, pažljivo odabrani za vaše najmilije.',
+                slikaSrc: '/slike/Set3.jpeg',
+                slikaAlt: 'Različiti lijepo upakovani pokloni na drvenom stolu.',
+                href: '/Pokloni',
+            },
+            {
+                ime: 'Privjesci',
+                opis: 'Jedinstveni privjesci za lančiće, ogrlice i narukvice, koji dodaju personaliziran i elegantan dodir vašem nakitu.',
+                slikaSrc: '/slike/Privjesak4.jpg',
+                slikaAlt: 'Kolekcija šarenih privjesaka za ključeve na drvenoj površini.',
+                href: '/Privjesci',
+            },
+            {
+                ime: 'Narukvice',
+                opis: 'Moderne narukvice za svaku priliku, dodajući šarm vašem zapešću.',
+                slikaSrc: '/slike/Narukvica5.jpg',
+                slikaAlt: 'Izbor elegantnih narukvica na izložbi.',
+                href: '/Narukvice',
+            },
+            {
+                ime: 'Naušnice',
+                opis: 'Predivne naušnice koje ističu vaš stil i ličnost.',
+                slikaSrc: '/slike/naušnice5.jpg',
+                slikaAlt: 'Asortiman naušnica, uključujući stud i viseće naušnice.',
+                href: '/Naušnice',
+            },
+            {
+                ime: 'Prstenje',
+                opis: 'Izuzetni prstenovi koji ostavljaju utisak, savršeni za svaku priliku.',
+                slikaSrc: '/slike/Prsten1.jpg',
+                slikaAlt: 'Kolekcija zadivljujućih prstenova u različitim stilovima.',
+                href: '/Prstenje',
+            },        
     ];
     return (
         <Layout>

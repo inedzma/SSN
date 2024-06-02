@@ -255,7 +255,7 @@ export const Header = ({onSearch}) => {
             </a>
          </li>
          <li className="hoover">
-            <a href="/Nausnice" className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/Naušnice" className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
          
 
                <span className="flex-1 ms-3 whitespace-nowrap">Naušnice</span>

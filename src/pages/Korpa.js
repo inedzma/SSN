@@ -48,7 +48,7 @@ export const Korpa = () => {
               {korpaProizvodi.map((product) => (
                 <tr key={product.id} className="border-b h-36 w-min-36 borderB">
                   <td className="p-3 flex flex-row items-center text-textBoja text-lg " style={{fontWeight: 'bold'}}>
-                    <img src={product.slikaSrc} className="h-36 mr-5 rounded-lg pl-5"/>
+                    <img src={product.slikaSrc} className="h-32 mr-5 rounded-lg pl-5"/>
                     {product.ime}</td>
                   <td className="p-3 text-textBoja text-center">{product.cijena ? product.cijena.toFixed(2) + ' KM' : 'N/A'}</td>
                   <td className="p-3 text-textBoja text-center">{product.quantity}</td>
@@ -135,20 +135,20 @@ export const Korpa = () => {
            <tbody>
              {korpaProizvodi.map((product) => (
                <tr key={product.id} className="border-b h-20 w-min-36 borderB">
-                 <td className="p-3 flex flex-row items-center text-lg " style={{fontWeight: 'bold'}}>
-                   <img src={product.slikaSrc} className="h-20  rounded-lg pl-5"/>
+                 <td className="p-3 flex justify-center items-center text-lg " >
+                   <img src={product.slikaSrc} className="h-auto  rounded-lg "/>
                    </td>
-                 <td className="p-3 pr-5 text-left font-bold">
+                 <td className=" pr-2 text-left font-bold w-32">
                  {product.ime}
-                 <div className='mt-5'>Kol:{product.quantity}</div>
+                 <div className='mt-3'>Kol:{product.quantity}</div>
                   </td>
                  <td className="py-3 text-left">
-                 {product.cijena ? product.cijena.toFixed(2) + ' KM' : 'N/A'}
-                  <div className='mt-5'> {(parseFloat(product.cijena) * product.quantity).toFixed(2)} KM</div>
+                 {product.cijena ? product.cijena.toFixed(2) + 'KM' : 'N/A'}
+                  <div className='mt-5'> {(parseFloat(product.cijena) * product.quantity).toFixed(2)}KM</div>
                  </td>
                  <td>
                    <button onClick={() => removeFromCart(product.id)}
-                     className="hover:bg-customColor rounded-lg p-2 font-medium text-DugmeUkloni hover:text-red-500">
+                     className="hover:bg-customColor rounded-lg p-2 font-bold text-DugmeUkloni hover:text-red-500">
                       X
                    </button>
                  </td>

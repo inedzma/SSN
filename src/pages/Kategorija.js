@@ -24,7 +24,7 @@ export const Kategorija = () => {
                                         <img
                                             src={proizvod.slikaSrc}
                                             alt={proizvod.slikaAlt}
-                                            className="h-full w-full object-cover object-center group-hover:opacity-75"
+                                            className="h-80 w-full object-cover object-center group-hover:opacity-75"
                                         />
                                     </div>
                                     <h3 className="mt-4 text-sm text-textBoja">{proizvod.ime}</h3>

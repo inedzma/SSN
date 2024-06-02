@@ -22,7 +22,7 @@ export const sviProizvodi = [
 
     {
         id: 3,
-        ime: 'Srebrna ogrlica s biserom',
+        ime: 'Zlatna ogrlica s biserom',
         opis: 'Ova elegantna srebrna ogrlica s biserom je suptilan, ali upečatljiv dodatak svakom outfitu. Dizajnirana je za žene koje vole klasičan stil s modernim twistom. Nakit koji nosite može vam donijeti samopouzdanje i dodati dašak sofisticiranosti vašem svakodnevnom izgledu.',
         kategorija: "Ogrlice",
         cijena: 35.00,
@@ -285,8 +285,8 @@ export const sviProizvodi = [
 
     {
         id: 29,
-        ime: 'Privjesak u obliku lista',
-        opis: 'Ovaj delikatni privjesak u obliku lista unosi prirodnu ljepotu i eleganciju vašem izgledu. Dizajniran za žene koje vole suptilne i romantične detalje, ovaj privjesak je idealan dodatak vašem svakodnevnom stilu.',
+        ime: 'Privjesak u obliku mačke',
+        opis: 'Ovaj šarmantni privjesak u obliku mačke simbolizira nezavisnost i eleganciju. Savršen za žene koje vole jedinstvene i razigrane detalje. Mačka simbolizira slobodu i misterioznost, čineći ovaj privjesak idealnim za svakodnevno nošenje ili posebne prilike.',
         kategorija: "Privjesci",
         cijena: 25.95,
         slikaSrc: '/slike/privjesak5.jpg',
@@ -297,8 +297,8 @@ export const sviProizvodi = [
 
     {
         id: 30,
-        ime: 'Privjesak u obliku zvona',
-        opis: 'Ovaj privlačni privjesak u obliku zvona simbolizira radost i veselje. Savršen za žene koje vole suptilne i simbolične detalje, ovaj privjesak unosi dašak svečanosti i radosti u vaš stil. Idealan kao poklon za posebne prilike.',
+        ime: 'Privjesak u obliku slona',
+        opis: 'Ovaj privlačni privjesak u obliku slona simbolizira radost i veselje. Savršen za žene koje vole suptilne i simbolične detalje, ovaj privjesak unosi dašak svečanosti i radosti u vaš stil. Idealan kao poklon za posebne prilike.',
         kategorija: "Privjesci",
         cijena: 15.95,
         slikaSrc: '/slike/privjesak6.jpg',
@@ -308,8 +308,8 @@ export const sviProizvodi = [
 
     {
         id: 31,
-        ime: ' Privjesak u obliku mačke',
-        opis: 'Ovaj šarmantni privjesak u obliku mačke simbolizira nezavisnost i eleganciju. Savršen za žene koje vole jedinstvene i razigrane detalje. Mačka simbolizira slobodu i misterioznost, čineći ovaj privjesak idealnim za svakodnevno nošenje ili posebne prilike.',
+        ime: ' Privjesak u obliku cvijeta',
+        opis: 'Ovaj delikatni privjesak u obliku cvijeta unosi prirodnu ljepotu i eleganciju vašem izgledu. Dizajniran za žene koje vole suptilne i romantične detalje, ovaj privjesak je idealan dodatak vašem svakodnevnom stilu.',
         kategorija: "Privjesci",
         cijena: 41.95,
         slikaSrc: '/slike/privjesak7.jpg',

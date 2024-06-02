@@ -96,18 +96,18 @@ export const Omiljeni = () => {
             </thead>
             <tbody>
             {omiljeniProizvodi.map((product) => (
-              <tr key={product.id} className="border-b h-36 w-min-36 borderB">
-                <td className="py-2 flex flex-row items-center text-lg font-bold" style={{fontWeight: 'bold'}}>
-                  <img src={product.slikaSrc} className="h-36 mr-5 rounded-lg pl-5"/>
+              <tr key={product.id} className="border-b h-20 borderB">
+                <td className="py-2 flex flex-row items-center text-lg font-bold">
+                  <img src={product.slikaSrc} className=" h-auto mr-5 rounded-lg pl-1"/>
                 </td>
-                <td className="py-2">
-                  <div className='flex flex-col h-36 w-32 font-bold'>
+                <td className="p-2">
+                  <div className='flex flex-col h-24 w-52 ml-2 font-bold'>
                 <div>{product.ime}</div>
-                  <div className='mt-24'>{product.cijena ? product.cijena.toFixed(2) + ' KM' : 'N/A'}</div>
+                  <div className='mt-auto p-2'>{product.cijena ? product.cijena.toFixed(2) + ' KM' : 'N/A'}</div>
                   </div>
               </td>
                 <td>
-                  <button onClick={() => removeFromFavorites(product.id)} className="font-medium text-DugmeUkloni hover:text-red-500">
+                  <button onClick={() => removeFromFavorites(product.id)} className="p-3 font-medium text-DugmeUkloni hover:text-red-500">
                     X
                   </button>
                 </td>
