@@ -20,13 +20,7 @@ export const Header = ({onSearch}) => {
             navigate(`/trazeniproizvod?search=${searchTerm}`);
         }
     };
-
-    function handleOnClick() {
-        let megaMenu = document.getElementById('mega-menu-full-dropdown');
-        megaMenu.classList.toggle("sakrij");
-       
-    }
-
+    
     function handleOnClick2() {
         let sidebar = document.getElementById('default-sidebar');
         sidebar.classList.toggle("sakrij");

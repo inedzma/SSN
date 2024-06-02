@@ -25,9 +25,7 @@ export const Korpa = () => {
   }
 
   const navigate = useNavigate();
-    const MyComponent = () => {
-        const navigate = useNavigate();
-    }
+
         return (
     <Layout>
 

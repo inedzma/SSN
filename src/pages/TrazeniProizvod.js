@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { sviProizvodi } from "../sviProizvodi"; // Import your products list
+import { sviProizvodi } from "../sviProizvodi";
 import Layout from "../components/Layout";
 import { useLocation } from "react-router-dom";
 
@@ -52,7 +52,7 @@ export const TrazeniProizvod = ({ onSearch }) => {
                                         />
                                     </div>
                                     <h3 className="mt-4 text-sm text-gray-700">{proizvod.ime}</h3>
-                                    <p className="mt-1 text-lg font-medium text-gray-900">{proizvod.cijena.toFixed(2)}</p>
+                                    <p className="mt-1 text-lg font-medium text-gray-900">{proizvod.cijena.toFixed(2)}<span> KM</span></p>
                                 </a>
                             ))}
                             </div>

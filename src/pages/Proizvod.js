@@ -37,7 +37,7 @@ const Popover = ({ targetId, message }) => {
                 className={`p-2 absolute z-10 popoverTelefon w-auto m-2 text-sm text-gray-500 transition-opacity duration-300 bg-customColor1 rounded-lg shadow-sm dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 ${
                     visible ? 'opacity-100 visible' : 'opacity-0 invisible'
                 }`}
-                style={{ top: '75px' }} // Adjust position as needed
+                style={{ top: '75px' }}
             >
                 <div className="flex items-center justify-between px-3 py-2 bg-gray-100 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
                     <div className="flex items-center">

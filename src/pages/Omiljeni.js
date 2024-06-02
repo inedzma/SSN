@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Layout from '../components/Layout';
-import {Pocetna} from "./Pocetna";
 import {useNavigate} from "react-router-dom";
 export const Omiljeni = () => {
   const [omiljeniProizvodi, setOmiljeniProizvodi] = useState(JSON.parse(localStorage.getItem('omiljeniProizvodi')) || []);
@@ -11,9 +10,7 @@ export const Omiljeni = () => {
     localStorage.setItem('omiljeniProizvodi', JSON.stringify(updatedProizvodi));
   };
     const navigate = useNavigate();
-    const MyComponent = () => {
-        const navigate = useNavigate();
-    }
+
   return (
     <Layout>
 
