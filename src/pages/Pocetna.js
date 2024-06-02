@@ -18,6 +18,7 @@ export const Pocetna = () => {
                 }
             );
         }  }, []);
+export const Pocetna = ({onSearch}) => {
     const kategorija = [
         {
             ime: 'Ogrlice',
