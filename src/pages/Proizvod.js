@@ -123,7 +123,7 @@ export const Proizvod = () => {
                     <p className="mb-4">{proizvod.opis}</p>
                     <div className="flex items-center mt-2">
                         <span className="mt-5 text-textBoja mr-2">Cijena:</span>
-                        <span className="mt-5 text-textBoja font-bold">{(parseFloat(proizvod.cijena)).toFixed(2)} KM</span>
+                        <span className="mt-5 text-textBoja font-bold">{(parseFloat(proizvod.cijena)).toFixed(2)}KM</span>
                     </div>
                     <div className="flex items-center mt-4">
                         <label htmlFor="kolicina" className="mr-2 text-textBoja">Količina:</label>
