@@ -156,7 +156,7 @@ export const Pocetna = ({onSearch}) => {
             <div className="bg-gray-100 ">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl sm:py-24 lg:max-w-none lg:py-14">
-                        <h1 className="text-3xl font-bold text-textBoja mt-4 pb-0 sm:pt-0">Kategorije</h1>
+                        <h1 className="text-3xl font-bold text-textBoja mt-8 pb-0 sm:pt-0">Kategorije</h1>
                         <div className=" mb-12 space-y-8 lg:grid lg:grid-cols-3 lg:gap-x-12 lg:space-y-0">
                             {kategorija.map((kategorija) => (
                                 <div key={kategorija.ime} className="group relative">
