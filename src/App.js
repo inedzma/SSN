@@ -1,42 +1,42 @@
 import './App.css';
-
-import {BrowserRouter, Route, Routes, ScrollRestoration} from "react-router-dom";
-import {Pocetna} from "./pages/Pocetna";
-import {Prijava} from "./pages/Prijava";
-import {Registracija} from "./pages/Registracija";
-import {ZaboravljenaSifra} from './pages/ZaboravljenaSifra';
-import {ONama} from "./pages/O nama";
-import {Proizvod} from "./pages/Proizvod";
-import {Kategorija} from "./pages/Kategorija";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Pocetna } from "./pages/Pocetna";
+import { Prijava } from "./pages/Prijava";
+import { Registracija } from "./pages/Registracija";
+import { ZaboravljenaSifra } from './pages/ZaboravljenaSifra';
+import { ONama } from "./pages/O nama";
+import { Proizvod } from "./pages/Proizvod";
+import { Kategorija } from "./pages/Kategorija";
 import { Kontakt } from './pages/Kontakt';
-import {Korpa} from "./pages/Korpa";
-import { Omiljeni } from './pages/Omiljeni';
-
+import { Korpa } from "./pages/Korpa";
+import { Omiljeni } from "./pages/Omiljeni";
+import { TrazeniProizvod } from "./pages/TrazeniProizvod";
+import { useState } from 'react';
 
 function App() {
-  return (
+    const [searchTerm, setSearchTerm] = useState('');
 
-          <BrowserRouter>
-              <Routes>
+    const handleSearch = (term) => {
+        setSearchTerm(term);
+    }
 
-                      <Route index element={<Pocetna />} />
-                      <Route path="prijava" element={<Prijava />} />
-                      <Route path="registracija" element={<Registracija />} />
-                      <Route path="zaboravljena-sifra" element={<ZaboravljenaSifra />} />
-                      <Route path="/:kategorijaIzRute" element={<Kategorija />} />
-                      <Route path="onama" element={<ONama />} />
-                      <Route path="/:kategorija/:id" element={<Proizvod />} />
-					  <Route path="kontakt" element={<Kontakt />} />
-
-                  {/*<Route path="*" element={<NoPage />} />*/}
-                      <Route path="kontakt" element={<Kontakt />} />
-                      {/*<Route path="*" element={<NoPage />} />*/}
-                      <Route path="korpa" element={<Korpa />} />
-                      <Route path="omiljeni" element={<Omiljeni />} />
-              </Routes>
-          </BrowserRouter>
-
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route index element={<Pocetna onSearch={handleSearch} />} />
+                <Route path="prijava" element={<Prijava onSearch={handleSearch} />} />
+                <Route path="registracija" element={<Registracija onSearch={handleSearch} />} />
+                <Route path="zaboravljena-sifra" element={<ZaboravljenaSifra onSearch={handleSearch} />} />
+                <Route path="/:kategorijaIzRute" element={<Kategorija onSearch={handleSearch} />} />
+                <Route path="onama" element={<ONama onSearch={handleSearch} />} />
+                <Route path="/:kategorija/:id" element={<Proizvod onSearch={handleSearch} />} />
+                <Route path="kontakt" element={<Kontakt onSearch={handleSearch} />} />
+                <Route path="korpa" element={<Korpa onSearch={handleSearch} />} />
+                <Route path="omiljeni" element={<Omiljeni onSearch={handleSearch} />} />
+                <Route path="trazeniproizvod" element={<TrazeniProizvod searchTerm={searchTerm} onSearch={handleSearch} />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

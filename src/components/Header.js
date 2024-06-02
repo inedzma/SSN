@@ -1,7 +1,26 @@
 import React from "react";
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
-export const Header = () => {
+export const Header = ({onSearch}) => {
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const navigate =useNavigate();
+
+    const handleSearch = (e) => {
+        const term = e.target.value;
+        setSearchTerm(term);
+        if (onSearch) {
+            onSearch(term);
+        }
+    };
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            navigate(`/trazeniproizvod?search=${searchTerm}`);
+        }
+    };
+
     function handleOnClick() {
         let megaMenu = document.getElementById('mega-menu-full-dropdown');
         megaMenu.classList.toggle("sakrij");
@@ -15,6 +34,10 @@ export const Header = () => {
     function handleOnClick3(){
         let kategorije = document.getElementById("kategorije");
         kategorije.classList.toggle("sakrij");
+    }
+    function handleOnClick4(){
+        let search = document.getElementById("search-mobile");
+        search.classList.toggle("sakrij");
     }
     return (
         <>
@@ -30,7 +53,7 @@ export const Header = () => {
                                       d="M1 1h15M1 7h15M1 13h15"/>
                             </svg>
                         </button>
-                        <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
+                        <button onClick={handleOnClick4} type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
                                 aria-expanded="false"
                                 className="md:hidden text-gray-500 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
                             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -40,6 +63,12 @@ export const Header = () => {
                             </svg>
                             <span className="sr-only">Search</span>
                         </button>
+                        <div id="search-mobile" className="sakrij overflow-y-auto   absolute top-20 w-4/5" >
+                        <input type="text" id="search-navbar" value={searchTerm} onChange={handleSearch}
+                                      onKeyPress={handleKeyPress}
+                                   className="block w-full p-2 ps-10 text-sm text-gray-900 border  border-customColor  rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   placeholder="Search..."/>
+                        </div>
                         <div className="logo">
                     <a className="flex items-center space-x-3 rtl:space-x-reverse" href="/">
                         <img src="/ssn-logo.png" className="h-11" alt="Logo"/>
@@ -56,7 +85,8 @@ export const Header = () => {
                                 </svg>
                                 <span className="sr-only">Search icon</span>
                             </div>
-                            <input type="text" id="search-navbar"
+                            <input type="text" id="search-navbar" value={searchTerm} onChange={handleSearch}
+                                      onKeyPress={handleKeyPress}
                                    className="block w-full p-2 ps-10 text-sm text-gray-900 border-customColor border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    placeholder="Search..."/>
                         </div>
