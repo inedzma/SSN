@@ -49,7 +49,7 @@ export const Kategorija = () => {
                                         />
                                     </div>
                                     <h3 className="mt-4 text-sm text-textBoja">{proizvod.ime}</h3>
-                                    <p className="mt-1 text-lg font-medium text-textBoja">{proizvod.cijena}<span> KM</span></p>
+                                    <p className="mt-1 text-lg font-medium text-textBoja">{proizvod.cijena.toFixed(2)}<span> KM</span></p>
                                 </a>
                             ))}
                         </div>
