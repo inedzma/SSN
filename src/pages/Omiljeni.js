@@ -1,18 +1,19 @@
 import React, {useState} from 'react';
 import Layout from '../components/Layout';
-
+import {Pocetna} from "./Pocetna";
+import {useNavigate} from "react-router-dom";
 export const Omiljeni = () => {
   const [omiljeniProizvodi, setOmiljeniProizvodi] = useState(JSON.parse(localStorage.getItem('omiljeniProizvodi')) || []);
-
-
-  
 
   const removeFromFavorites = (id) => {
     const updatedProizvodi = omiljeniProizvodi.filter(product => product.id !== id);
     setOmiljeniProizvodi(updatedProizvodi);
     localStorage.setItem('omiljeniProizvodi', JSON.stringify(updatedProizvodi));
   };
-
+    const navigate = useNavigate();
+    const MyComponent = () => {
+        const navigate = useNavigate();
+    }
   return (
     <Layout>
 
@@ -23,7 +24,7 @@ export const Omiljeni = () => {
             <div className="flex flex-col justify-center items-center">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_aaZ90iTCcCh_EvooQ0Xc__25bcuUNffRDOcwiLmglA&s"  alt="no-favorites" className="mt-32 h-64"/>
               <h1 className="mt-10 mb-10 text-textBoja text-center text-3xl font-bold">Još uvijek niste dodali ni jedan proizvod u omiljene</h1>
-            <button onClick={() => window.history.back()} className="bg-Dugme hover:bg-customColor font-bold py-2 px-4 rounded-xl mb-20 text-white">
+            <button onClick={() => navigate('/')} className="bg-Dugme hover:bg-customColor font-bold py-2 px-4 rounded-xl mb-20 text-white">
             Nazad
           </button>
            
@@ -62,7 +63,7 @@ export const Omiljeni = () => {
           
         <div className=' flex flex-row justify-center w-1/2' >
           
-          <button onClick={() => window.history.back()} className=" bg-Dugme hover:bg-customColor text-white font-bold py-2 px-4 rounded-xl mt-10 ml-2 mr-4 mb-4 w-1/2" >
+          <button onClick={() => navigate('/')} className=" bg-Dugme hover:bg-customColor text-white font-bold py-2 px-4 rounded-xl mt-10 ml-2 mr-4 mb-4 w-1/2" >
             Nazad
           </button>
           
@@ -81,7 +82,7 @@ export const Omiljeni = () => {
             <div className="flex flex-col justify-center items-center">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_aaZ90iTCcCh_EvooQ0Xc__25bcuUNffRDOcwiLmglA&s"  alt="no-favorites" className="mt-32 h-64"/>
               <h1 className="mt-10 mb-10 text-textBoja text-center text-3xl font-bold">Još uvijek niste dodali ni jedan proizvod u omiljene</h1>
-            <button onClick={() => window.history.back()} className="font-bold py-2 px-4 rounded-xl mb-20  bg-Dugme hover:bg-customColor text-white">
+            <button onClick={() =>navigate('/')} className="font-bold py-2 px-4 rounded-xl mb-20  bg-Dugme hover:bg-customColor text-white">
             Nazad
           </button>
            
@@ -119,7 +120,7 @@ export const Omiljeni = () => {
           
         <div className=' flex flex-row justify-center w-1/2' >
           
-          <button onClick={() => window.history.back()} className="text-white font-bold py-2 px-4 rounded-xl mt-10 ml-2 mr-4  bg-Dugme hover:bg-customColor mb-4 w-1/2" >
+          <button onClick={() => navigate('/')} className="text-white font-bold py-2 px-4 rounded-xl mt-10 ml-2 mr-4  bg-Dugme hover:bg-customColor mb-4 w-1/2" >
             Nazad
           </button>
           

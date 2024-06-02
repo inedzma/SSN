@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const Korpa = () => {
   const [korpaProizvodi, setKorpaProizvodi] = useState(JSON.parse(localStorage.getItem('korpa')) || []);
-  const navigate = useNavigate();
+  const navigate2 = useNavigate();
 
   // Ukupna cijena korpe
   const ukupnaCijena = korpaProizvodi.reduce((total, product) => {
@@ -19,12 +19,16 @@ export const Korpa = () => {
 
   const removeCart = () => {
     setKorpaProizvodi([]);
-    navigate('/');
+    navigate2('/');
     localStorage.setItem('korpa', JSON.stringify([]));
   
   }
 
-  return (
+  const navigate = useNavigate();
+    const MyComponent = () => {
+        const navigate = useNavigate();
+    }
+        return (
     <Layout>
 
       <div className='sakrijNaTelefonu'>
@@ -34,7 +38,7 @@ export const Korpa = () => {
             <div className="flex flex-col justify-center items-center">
               <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-28/90/empty_cart-512.png"  alt="empty-cart" className="mt-32 h-64"/>
               <h1 className="mt-10 mb-10 text-center text-textBoja text-3xl font-bold">Vaša korpa je prazna</h1>
-            <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20 border border-black text-textBoja">
+            <button onClick={() => navigate('/')} className=" font-bold py-2 px-4 rounded-xl mb-20 border border-black text-textBoja">
             Nastavi s kupovinom
           </button>
            
@@ -107,7 +111,7 @@ export const Korpa = () => {
         </div>
         <div className=' flex flex-row ' style={{width: '500px'}}>
           
-          <button onClick={() => window.history.back()} className="text-textBoja font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
+          <button onClick={() => navigate('/')} className="text-textBoja font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
             Nastavi s kupovinom
           </button>
           <button onClick={removeCart} className=" font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white bg-Dugme hover:bg-customColor ">
@@ -128,7 +132,7 @@ export const Korpa = () => {
            <div className="flex flex-col justify-center items-center">
              <img src="https://cdn3.iconfinder.com/data/icons/shopping-and-ecommerce-28/90/empty_cart-512.png"  alt="empty-cart" className="mt-32 h-64"/>
              <h1 className="mt-10 mb-10 text-center text-3xl font-bold">Vaša korpa je prazna</h1>
-           <button onClick={() => window.history.back()} className=" font-bold py-2 px-4 rounded-xl mb-20 border border-black text-textBoja">
+           <button onClick={() => navigate('/')} className=" font-bold py-2 px-4 rounded-xl mb-20 border border-black text-textBoja">
            Nastavi s kupovinom
          </button>
           
@@ -198,7 +202,7 @@ export const Korpa = () => {
        </div>
        <div className=' flex flex-row'>
          
-         <button onClick={() => window.history.back()} className="font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
+         <button onClick={() => navigate('/')} className="font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
            Nastavi s kupovinom
          </button>
          <button onClick={removeCart} className=" bg-Dugme hover:bg-customColor font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white">
