@@ -25,14 +25,14 @@ export const Pocetna = ({onSearch}) => {
             {
                 ime: 'Ogrlice',
                 opis: 'Elegantne i moderne ogrlice koje će upotpuniti svaki stil.',
-                slikaSrc: '/Ogrlica1.jpeg',
+                slikaSrc: '/slike/Ogrlica1.jpg',
                 slikaAlt: 'Prelijepa zlatna ogrlica prikazana na stalku za nakit.',
                 href: '/Ogrlice',
             },
             {
                 ime: 'Pokloni',
                 opis: 'Savršeni pokloni za svaku priliku, pažljivo odabrani za vaše najmilije.',
-                slikaSrc: '/slike/Set3.jpeg',
+                slikaSrc: '/slike/Set10.jpeg',
                 slikaAlt: 'Različiti lijepo upakovani pokloni na drvenom stolu.',
                 href: '/Pokloni',
             },
@@ -46,7 +46,7 @@ export const Pocetna = ({onSearch}) => {
             {
                 ime: 'Narukvice',
                 opis: 'Moderne narukvice za svaku priliku, dodajući šarm vašem zapešću.',
-                slikaSrc: '/slike/Narukvica5.jpg',
+                slikaSrc: '/slike/Narukvica6.jpg',
                 slikaAlt: 'Izbor elegantnih narukvica na izložbi.',
                 href: '/Narukvice',
             },
@@ -60,7 +60,7 @@ export const Pocetna = ({onSearch}) => {
             {
                 ime: 'Prstenje',
                 opis: 'Izuzetni prstenovi koji ostavljaju utisak, savršeni za svaku priliku.',
-                slikaSrc: '/slike/Prsten1.jpg',
+                slikaSrc: '/slike/Prsten5.jpg',
                 slikaAlt: 'Kolekcija zadivljujućih prstenova u različitim stilovima.',
                 href: '/Prstenje',
             },        
@@ -93,37 +93,14 @@ export const Pocetna = ({onSearch}) => {
                                                 <div
                                                     className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                                                     <img
-                                                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                                                        src="/slike/naušnice5.jpg"
                                                         alt=""
                                                         className="h-full w-full object-cover object-center"
                                                     />
                                                 </div>
                                                 <div className="h-64 w-44 overflow-hidden rounded-lg">
                                                     <img
-                                                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                                                        alt=""
-                                                        className="h-full w-full object-cover object-center"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                                                <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                                    <img
-                                                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                                                        alt=""
-                                                        className="h-full w-full object-cover object-center"
-                                                    />
-                                                </div>
-                                                <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                                    <img
-                                                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                                                        alt=""
-                                                        className="h-full w-full object-cover object-center"
-                                                    />
-                                                </div>
-                                                <div className="h-64 w-44 overflow-hidden rounded-lg">
-                                                    <img
-                                                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                                                        src="/slike/ogrlica2.png"
                                                         alt=""
                                                         className="h-full w-full object-cover object-center"
                                                     />
@@ -132,14 +109,37 @@ export const Pocetna = ({onSearch}) => {
                                             <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                                 <div className="h-64 w-44 overflow-hidden rounded-lg">
                                                     <img
-                                                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                                                        src="/slike/prsten6.jpg"
                                                         alt=""
                                                         className="h-full w-full object-cover object-center"
                                                     />
                                                 </div>
                                                 <div className="h-64 w-44 overflow-hidden rounded-lg">
                                                     <img
-                                                        src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                                                        src="/slike/ogrlica7.jpg"
+                                                        alt=""
+                                                        className="h-full w-full object-cover object-center"
+                                                    />
+                                                </div>
+                                                <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                                    <img
+                                                        src="/slike/naušnice7.jpg"
+                                                        alt=""
+                                                        className="h-full w-full object-cover object-center"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                                    <img
+                                                        src="/slike/ogrlica5.jpg"
+                                                        alt=""
+                                                        className="h-full w-full object-cover object-center"
+                                                    />
+                                                </div>
+                                                <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                                    <img
+                                                        src="/slike/prsten1.jpg"
                                                         alt=""
                                                         className="h-full w-full object-cover object-center"
                                                     />
