@@ -39,6 +39,7 @@ export const Header = ({onSearch}) => {
         let megaMenu = document.getElementById('mega-menu-full-dropdown');
         megaMenu.classList.toggle("sakrij");
         window.scrollTo(0, 0);
+    }
 
     function handleOnClick4(){
         let search = document.getElementById("search-mobile");

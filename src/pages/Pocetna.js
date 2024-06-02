@@ -2,7 +2,9 @@ import React, {useEffect, useRef} from 'react';
 import Layout from "../components/Layout";
 
 
-export const Pocetna = () => {
+    
+export const Pocetna = ({onSearch}) => {
+
     const emailRef = useRef(null);
     useEffect(() => {
         if (emailRef.current) {
@@ -18,7 +20,7 @@ export const Pocetna = () => {
                 }
             );
         }  }, []);
-export const Pocetna = ({onSearch}) => {
+
     const kategorija = [
         {
             ime: 'Ogrlice',
