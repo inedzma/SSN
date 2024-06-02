@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import Layout from '../components/Layout';
+import { useNavigate } from 'react-router-dom';
 
 export const Korpa = () => {
   const [korpaProizvodi, setKorpaProizvodi] = useState(JSON.parse(localStorage.getItem('korpa')) || []);
+  const navigate = useNavigate();
 
   // Ukupna cijena korpe
   const ukupnaCijena = korpaProizvodi.reduce((total, product) => {
@@ -14,6 +16,13 @@ export const Korpa = () => {
     setKorpaProizvodi(updatedProizvodi);
     localStorage.setItem('korpa', JSON.stringify(updatedProizvodi));
   };
+
+  const removeCart = () => {
+    setKorpaProizvodi([]);
+    navigate('/');
+    localStorage.setItem('korpa', JSON.stringify([]));
+  
+  }
 
   return (
     <Layout>
@@ -101,7 +110,7 @@ export const Korpa = () => {
           <button onClick={() => window.history.back()} className="text-textBoja font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
             Nastavi s kupovinom
           </button>
-          <button className=" font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white bg-Dugme hover:bg-customColor ">
+          <button onClick={removeCart} className=" font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white bg-Dugme hover:bg-customColor ">
             NARUČI
           </button>
          </div>
@@ -192,7 +201,7 @@ export const Korpa = () => {
          <button onClick={() => window.history.back()} className="font-bold py-2 px-4 rounded-xl mt-4 ml-2 mr-4 border border-black mb-4 w-1/2" style={{borderWidth: '3px'}}>
            Nastavi s kupovinom
          </button>
-         <button className=" bg-Dugme hover:bg-customColor font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white">
+         <button onClick={removeCart} className=" bg-Dugme hover:bg-customColor font-bold py-2 px-4 rounded-xl m-4 mr-2 w-1/2 text-white">
            NARUČI
          </button>
         </div>
