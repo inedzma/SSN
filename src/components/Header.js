@@ -151,7 +151,7 @@ export const Header = () => {
                     </ul>
                     <ul>
                         <li>
-                            <a href="/Nausnice"
+                            <a href="/Naušnice"
                                className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <div className="font-semibold text-white hover:text-customColor4">Naušnice</div>
                             </a>
