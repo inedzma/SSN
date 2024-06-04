@@ -35,14 +35,14 @@ export const Omiljeni = () => {
             <thead>
     
                 <tr className=" border-b borderB mb-5">
-                <th className="text-textBoja py-2 pl-44">Proizvod</th>
-                <th className="text-textBoja py-2">Cijena</th>
+                <th className="pr-28 text-textBoja py-2 pl-44">Proizvod</th>
+                <th className="pr-16 text-textBoja py-2">Cijena</th>
               </tr>
             </thead>
             <tbody>
             {omiljeniProizvodi.map((product) => (
               <tr key={product.id} className="border-b h-36 w-min-36 borderB">
-                <td className="py-2 flex flex-row items-center text-textBoja text-lg font-bold" style={{fontWeight: 'bold'}}>
+                <td className="pr-6 py-2 flex flex-row items-center text-textBoja text-lg font-bold" style={{fontWeight: 'bold'}}>
                   <img src={product.slikaSrc} className="h-36 mr-5 rounded-lg pl-5"/>
                   {product.ime}
                 </td>
